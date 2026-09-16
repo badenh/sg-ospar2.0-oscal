@@ -20,7 +20,6 @@ A machine-readable version of the Association of Banks in Singapore (ABS) *Guide
 | `qa-report.md` | Extraction quality report for this release (validation results, counts, text reconciliation) |
 | `ospar-v2.0-profile-full.{json,xml,yaml}` | OSCAL profile importing every control, with no selection or modification |
 | `ospar-v2.0-profile-full-resolved.{json,xml,yaml}` | That profile resolved into a catalog, ready for SSP and assessment tooling that expects a resolved catalog |
-| `profile-qa-report.md` | Validation and equivalence checks for the profile and resolved catalog |
 
 All three OSCAL files carry the same content. Pick whichever format your tooling expects.
 
