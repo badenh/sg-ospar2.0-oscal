@@ -1,0 +1,39 @@
+profile:
+  uuid: e23a45f0-54e5-516a-b32b-bce545d3b554
+  metadata:
+    title: Guidelines on Control Objectives and Procedures for Outsourced Service Providers (OSPAR Guidelines) - Full Profile
+      (all controls)
+    published: '2024-03-25T00:00:00+08:00'
+    last-modified: '2026-09-16T00:00:00+10:00'
+    version: '2.0'
+    oscal-version: 1.1.3
+    props:
+    - name: transformation
+      value: unofficial
+      ns: urn:x-ospar-oscal:ns
+    - name: profile-scope
+      value: full
+      ns: urn:x-ospar-oscal:ns
+    roles:
+    - id: creator
+      title: Document Creator
+    parties:
+    - uuid: 9d1a3ab0-c971-5d45-baa1-381cce834901
+      name: The Association of Banks in Singapore
+      type: organization
+      short-name: ABS
+      links:
+      - href: https://abs.org.sg/
+        rel: website
+    responsible-parties:
+    - role-id: creator
+      party-uuids:
+      - 9d1a3ab0-c971-5d45-baa1-381cce834901
+    remarks: '**Unofficial.** Imports every control in the unofficial OSCAL catalog of the ABS OSPAR Guidelines v2.0 without
+      selection or modification. ABS publishes no baselines; this profile is a mechanical import target, not a tailoring.
+      The source PDF is authoritative.'
+  imports:
+  - href: ospar-v2.0-catalog.yaml
+    include-all: {}
+  merge:
+    as-is: true

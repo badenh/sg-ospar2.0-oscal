@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<profile xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="e23a45f0-54e5-516a-b32b-bce545d3b554">
+  <metadata>
+    <title>Guidelines on Control Objectives and Procedures for Outsourced Service Providers (OSPAR Guidelines) - Full Profile (all controls)</title>
+    <published>2024-03-25T00:00:00+08:00</published>
+    <last-modified>2026-09-16T00:00:00+10:00</last-modified>
+    <version>2.0</version>
+    <oscal-version>1.1.3</oscal-version>
+    <prop name="transformation" ns="urn:x-ospar-oscal:ns" value="unofficial"/>
+    <prop name="profile-scope" ns="urn:x-ospar-oscal:ns" value="full"/>
+    <role id="creator">
+      <title>Document Creator</title>
+    </role>
+    <party uuid="9d1a3ab0-c971-5d45-baa1-381cce834901" type="organization">
+      <name>The Association of Banks in Singapore</name>
+      <short-name>ABS</short-name>
+      <link href="https://abs.org.sg/" rel="website"/>
+    </party>
+    <responsible-party role-id="creator">
+      <party-uuid>9d1a3ab0-c971-5d45-baa1-381cce834901</party-uuid>
+    </responsible-party>
+    <remarks>
+      <p><strong>Unofficial.</strong> Imports every control in the unofficial OSCAL catalog of the ABS OSPAR Guidelines v2.0 without selection or modification. ABS publishes no baselines; this profile is a mechanical import target, not a tailoring. The source PDF is authoritative.</p>
+    </remarks>
+  </metadata>
+  <import href="ospar-v2.0-catalog.xml">
+    <include-all/>
+  </import>
+  <merge>
+    <as-is>true</as-is>
+  </merge>
+</profile>

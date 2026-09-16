@@ -1,0 +1,3649 @@
+catalog:
+  uuid: 29b1b9a1-f44f-5d8b-a019-1fedb2d92a38
+  metadata:
+    title: Guidelines on Control Objectives and Procedures for Outsourced Service Providers (OSPAR Guidelines) - Full Profile
+      (all controls)
+    published: '2024-03-25T00:00:00+08:00'
+    last-modified: '2026-09-16T00:00:00+10:00'
+    version: '2.0'
+    oscal-version: 1.1.3
+    revisions:
+    - title: Version 1.0
+      published: '2015-07-25T00:00:00+08:00'
+      version: '1.0'
+      remarks: Issuance of initial GUIDELINES ON CONTROL OBJECTIVES AND PROCEDURES FOR OUTSOURCED SERVICE PROVIDERS.
+    - title: Version 1.1
+      published: '2017-06-01T00:00:00+08:00'
+      version: '1.1'
+      remarks: Updated the GUIDELINES ON CONTROL OBJECTIVES AND PROCEDURES FOR OUTSOURCED SERVICE PROVIDERS based on the new
+        MAS Guidelines on Outsourcing (issued on 27 July 2016) and industry feedback.
+    - title: Version 2.0
+      published: '2024-03-25T00:00:00+08:00'
+      version: '2.0'
+      remarks: 'Updated the GUIDELINES ON CONTROL OBJECTIVES AND PROCEDURES FOR OUTSOURCED SERVICE PROVIDERS based on the
+        following MAS regulatory releases/updates:
+
+
+        - MAS Notice 655 on Cyber Hygiene (issued on 6 August 2019)
+
+        - MAS Technology Risk Management (“TRM”) Guidelines (issued on 18 January 2021)
+
+        - MAS/TCRS/2021/03: Advisory on Addressing the Technology and Cyber Security Risks Associated with Public Cloud Adoption
+        (issued on 1 June 2021)
+
+        - MAS Guidelines on Business Continuity Management (issued on 6 June 2022)
+
+        - MAS Notice 658 on Management of Outsourced Relevant Services for Banks and MAS Notice 1121 Management of Outsourced
+        Relevant Services for Merchant Banks (issued on 11 December 2023)
+
+        - MAS Guidelines on Outsourcing (Banks) (issued on 11 December 2023)'
+    props:
+    - name: resolution-tool
+      value: libOSCAL-Java
+    - name: transformation
+      value: unofficial
+      ns: urn:x-ospar-oscal:ns
+    - name: profile-scope
+      value: full
+      ns: urn:x-ospar-oscal:ns
+    - name: metadata-restored
+      value: 'true'
+      ns: urn:x-ospar-oscal:ns
+      remarks: uuid, last-modified, published, revisions, roles, parties, remarks, source link and back-matter re-added after
+        resolution; groups, controls and parts are resolver output.
+    links:
+    - href: ospar-v2.0-profile-full.json
+      rel: source-profile
+    - href: '#488521b7-60d8-506e-94e3-c7b6b39404ed'
+      rel: source
+    roles:
+    - id: creator
+      title: Document Creator
+    parties:
+    - uuid: 9d1a3ab0-c971-5d45-baa1-381cce834901
+      name: The Association of Banks in Singapore
+      type: organization
+      short-name: ABS
+      links:
+      - href: https://abs.org.sg/
+        rel: website
+    responsible-parties:
+    - role-id: creator
+      party-uuids:
+      - 9d1a3ab0-c971-5d45-baa1-381cce834901
+    remarks: '**Unofficial.** Imports every control in the unofficial OSCAL catalog of the ABS OSPAR Guidelines v2.0 without
+      selection or modification. ABS publishes no baselines; this profile is a mechanical import target, not a tailoring.
+      The source PDF is authoritative.
+
+
+      **Unofficial** machine-readable transformation of the ABS OSPAR Guidelines v2.0 produced from the published PDF. Not
+      produced or endorsed by The Association of Banks in Singapore. The source PDF is authoritative.
+
+
+      ## Introduction
+
+
+      Outsourcing continues to be prevalent in today''s business landscape. In outsourcing, Financial Institutions (“FIs”)
+      rely on Outsourced Service Providers (“OSP”) to perform certain business functions or services. While outsourcing has
+      proven to be effective; FIs should ensure that their service providers maintain the same level of governance, rigour
+      and consistency as if the services were still managed by themselves.
+
+
+      Loss of customer information or confidential data, or disruptions to critical FI services may result in reputational
+      risk impacts or regulatory breaches. Outsourcing risks must be managed to safeguard the FIs’ operations and customers.
+      The service can be outsourced, but the risk cannot.
+
+
+      To address this, the Association of Banks in Singapore (“ABS”) has established these ‘Guidelines on Control Objectives
+      and Procedures for Outsourced Service Providers’ (“Guidelines”). These Guidelines form the minimum/baseline controls
+      that OSPs which wish to service the FIs should have in place. However, FIs with specific needs should continue to liaise
+      with their OSPs on a bilateral basis to impose any additional specific requirements. Where the OSPs deem necessary,
+      OSPs are encouraged to supplement these minimum/baseline controls with specific controls as they relate to the security,
+      availability, processing integrity and/or confidentiality of their service. Examples of such controls are included in
+      Section III ‘Service Level Controls’, item (b) ‘Authorising and Processing Transactions’.
+
+
+      By complying with the Guidelines, OSPs can assure the FIs that their controls are designed and operating effectively
+      to meet the control objectives that are relevant in the provision of the outsourced services.
+
+
+      ## Scope
+
+
+      These Guidelines should be adopted by all OSPs in Singapore that undertake material ongoing outsourced relevant services
+      for FIs in Singapore.'
+  groups:
+  - id: ospar-ai
+    class: audits-and-inspections
+    title: Audits and Inspections
+    props:
+    - name: label
+      value: AI
+    controls:
+    - id: ospar-ai-1
+      class: audit-requirement
+      title: Engagement of External Auditor
+      props:
+      - name: label
+        value: AI.I
+      - name: sort-id
+        value: 0-01
+      parts:
+      - id: ospar-ai-1_smt
+        name: statement
+        prose: 'The OSP should engage a qualified auditor to perform audits in accordance with these Guidelines on the services
+          rendered to the FIs.
+
+
+          In the event that an OSP decides to change the external auditor or decides to appoint a different external auditor
+          for validation of remediation activities (refer to section “V. REPORTING AND HANDLING OF CONTROL FAILURE / QUALIFICATION
+          OF CONTROL OBJECTIVES”), the OSP must ensure that there is a proper hand-over from the outgoing auditor to the incoming
+          auditor to ensure that the interests of the FIs remain protected.'
+    - id: ospar-ai-2
+      class: audit-requirement
+      title: Criteria for Qualification External Auditor
+      props:
+      - name: label
+        value: AI.II
+      - name: sort-id
+        value: 0-02
+      parts:
+      - id: ospar-ai-2_smt
+        name: statement
+        prose: 'The appointed external auditor should demonstrate a sound understanding of outsourcing risks pertinent to
+          the FI industry as well as fulfil the following criteria:'
+        parts:
+        - id: ospar-ai-2_smt.1
+          name: item
+          props:
+          - name: label
+            value: '1.'
+          prose: The audit firm must have audited at least 2 commercial banks operating in Singapore in the last 5 years;
+            and
+        - id: ospar-ai-2_smt.2
+          name: item
+          props:
+          - name: label
+            value: '2.'
+          prose: The engagement partner, who signs off the Audit Report, must have audited at least 2 commercial banks operating
+            in Singapore in the last 5 years.
+    - id: ospar-ai-3
+      class: audit-requirement
+      title: Frequency of Audit
+      props:
+      - name: label
+        value: AI.III
+      - name: sort-id
+        value: 0-03
+      parts:
+      - id: ospar-ai-3_smt
+        name: statement
+        prose: The audit should be performed once every 12 months. To be useful to FIs relying on the report, the samples
+          selected for testing the operating effectiveness of controls should cover the entire period since the previous audit,
+          with a minimum testing period of 6 months. If the period is less than 6 months, the reasons for the shorter period
+          should be provided in the report.
+    - id: ospar-ai-4
+      class: audit-requirement
+      title: Audit Report
+      props:
+      - name: label
+        value: AI.IV
+      - name: sort-id
+        value: 0-04
+      parts:
+      - id: ospar-ai-4_smt
+        name: statement
+        prose: The appointed external auditor should issue the audit report in the format stated in the Outsourced Service
+          Provider Audit Report (“OSPAR”) template. The OSP must furnish a copy of its audit report to its FI clients.
+    - id: ospar-ai-5
+      class: audit-requirement
+      title: Reporting and Handling of Control Failure / Qualification of Control Objectives
+      props:
+      - name: label
+        value: AI.V
+      - name: sort-id
+        value: 0-05
+      parts:
+      - id: ospar-ai-5_smt
+        name: statement
+        prose: 'Where the auditor identifies a failure in the design and/or operating effectiveness of a control activity
+          in relation to a control objective, the auditor should assess the potential impact of the failure on the services
+          provided to the FIs. The auditor should be guided by the relevant auditing standards which specify the procedures
+          for qualification of a control objective.
+
+
+          OSPs should notify the FIs of significant issues and concerns and remediation plans as soon as practicable or immediately
+          if the issues could potentially lead to a prolonged service failure or disruption in the outsourcing arrangement,
+          or any breach of security and confidentiality of the FI’s customer information.
+
+
+          The OSP should develop remediation plans to address the issues identified by the audit. If the issues require an
+          extended time period to correct, the OSP should identify short term measures to mitigate the risks. The remediation
+          measures should be validated by the auditor or other competent independent party.'
+    - id: ospar-ai-6
+      class: audit-requirement
+      title: Rights of FIs and MAS
+      props:
+      - name: label
+        value: AI.VI
+      - name: sort-id
+        value: 0-06
+      parts:
+      - id: ospar-ai-6_smt
+        name: statement
+        prose: The MAS and FIs retain the right to audit the OSP, as well as the OSP’s sub-contractors.
+  - id: ospar-elc
+    class: part
+    title: Entity Level Controls
+    props:
+    - name: label
+      value: I
+    parts:
+    - id: ospar-elc_ovw
+      name: overview
+      prose: 'Entity level controls are internal controls to ensure that the OSP’s management directives pertaining to the
+        entire entity are carried out. The controls include the following components:'
+      parts:
+      - id: ospar-elc_ovw.a
+        name: item
+        props:
+        - name: label
+          value: a)
+        prose: Control Environment.
+      - id: ospar-elc_ovw.b
+        name: item
+        props:
+        - name: label
+          value: b)
+        prose: Risk Assessment.
+      - id: ospar-elc_ovw.c
+        name: item
+        props:
+        - name: label
+          value: c)
+        prose: Information and Communication.
+      - id: ospar-elc_ovw.d
+        name: item
+        props:
+        - name: label
+          value: d)
+        prose: Monitoring.
+      - id: ospar-elc_ovw.e
+        name: item
+        props:
+        - name: label
+          value: e)
+        prose: Information Security Policies.
+      - id: ospar-elc_ovw.f
+        name: item
+        props:
+        - name: label
+          value: f)
+        prose: Human Resource Policies and Practices.
+      - id: ospar-elc_ovw.g
+        name: item
+        props:
+        - name: label
+          value: g)
+        prose: Practices related to Sub-Contracting / Third Parties related to Delivery of Service.
+      - id: ospar-elc_ovw.p1
+        name: paragraph
+        ns: urn:x-ospar-oscal:ns
+        prose: 'The following is a brief description of the components:'
+    controls:
+    - id: ospar-elc-a
+      class: entity-level-control
+      title: Control Environment
+      props:
+      - name: label
+        value: I(a)
+      - name: sort-id
+        value: 1-a
+      parts:
+      - id: ospar-elc-a_smt
+        name: statement
+        prose: 'The control environment sets the priority and culture for the OSP, influencing the control consciousness of
+          its people. It is the foundation for all the other components of internal control, providing discipline and structure.
+          Aspects of the OSP’s control environment may affect the services provided to the FIs. For example, the OSP’s hiring
+          and training practices may affect the quality and ability of the OSP’s personnel to provide services to the FIs.
+
+
+          The control environment includes the following elements:'
+        parts:
+        - id: ospar-elc-a_smt.i
+          name: item
+          props:
+          - name: label
+            value: i.
+          prose: Communication and enforcement of integrity and ethical values.
+        - id: ospar-elc-a_smt.ii
+          name: item
+          props:
+          - name: label
+            value: ii.
+          prose: Commitment to competence.
+        - id: ospar-elc-a_smt.iii
+          name: item
+          props:
+          - name: label
+            value: iii.
+          prose: Management's philosophy and operating style.
+        - id: ospar-elc-a_smt.iv
+          name: item
+          props:
+          - name: label
+            value: iv.
+          prose: Organisational structure as well as assignment of authority and responsibility.
+    - id: ospar-elc-b
+      class: entity-level-control
+      title: Risk Assessment
+      props:
+      - name: label
+        value: I(b)
+      - name: sort-id
+        value: 1-b
+      parts:
+      - id: ospar-elc-b_smt
+        name: statement
+        prose: 'The OSP should establish a risk management framework to manage enterprise risks, technology risks, etc. Appropriate
+          governance structures and processes are established, with well-defined roles, responsibilities, and clear reporting
+          lines across the various organisational functions.
+
+
+          The following is a list of risk assessment factors and examples of how they might relate to the OSP:'
+        parts:
+        - id: ospar-elc-b_smt.i
+          name: item
+          props:
+          - name: label
+            value: i.
+          prose: Changes in the operating environment – Prior to introducing changes to the operating environment (including
+            technology components), OSP should assess the materiality of the changes to the FI's outsourcing arrangement using
+            a change management framework and should notify and/or seek approval from FIs. This is applicable to sub-contractors
+            used by the OSP.
+        - id: ospar-elc-b_smt.ii
+          name: item
+          props:
+          - name: label
+            value: ii.
+          prose: New personnel – New personnel without adequate training and / or background screening may increase the risk
+            that controls may not be performed effectively.
+        - id: ospar-elc-b_smt.iii
+          name: item
+          props:
+          - name: label
+            value: iii.
+          prose: New or revamped information systems – The OSP may incorporate new functions into its systems or implement
+            new systems that could affect the FIs' outsourcing arrangements.
+        - id: ospar-elc-b_smt.iv
+          name: item
+          props:
+          - name: label
+            value: iv.
+          prose: Rapid growth – If the OSP gains a substantial number of new customers, the operating effectiveness of certain
+            controls could be affected.
+        - id: ospar-elc-b_smt.v
+          name: item
+          props:
+          - name: label
+            value: v.
+          prose: New technology – If the OSP implements a new technology, its risks and impact to the FIs should be assessed.
+        - id: ospar-elc-b_smt.vi
+          name: item
+          props:
+          - name: label
+            value: vi.
+          prose: New business models, products, or activities – The diversion of resources to new activities from existing
+            activities could affect the operating effectiveness of certain controls at the OSP.
+        - id: ospar-elc-b_smt.vii
+          name: item
+          props:
+          - name: label
+            value: vii.
+          prose: Corporate restructurings – A change in ownership or internal reorganisation could affect reporting responsibilities
+            or the resources available for services to the FIs.
+        - id: ospar-elc-b_smt.viii
+          name: item
+          props:
+          - name: label
+            value: viii.
+          prose: Expanded foreign operations – The OSPs that use personnel in foreign locations may have difficulties responding
+            to changes in the FI’s requirements.
+        - id: ospar-elc-b_smt.p1
+          name: paragraph
+          ns: urn:x-ospar-oscal:ns
+          prose: 'The OSP should conduct environmental scanning for relevant risk events and threats applicable to its entire
+            environment, including IT environment and information assets. Examples of risk events and threats that could have
+            a severe impact on the OSPs and its FI customers include internal sabotage, malware, data theft, natural disasters,
+            terrorism, pandemic outbreaks and cyber incidents.
+
+
+            The OSP should review the adequacy and effectiveness of its risk management framework regularly.
+
+
+            A risk register should be maintained to facilitate the monitoring and reporting of enterprise risks which also
+            includes, but not limited to, operational risks, technology risks, legal risks and reputational risks. Significant
+            risks should be monitored closely and reported to the board of directors and senior management. The frequency
+            of monitoring and reporting should be commensurate with the level of risk.'
+    - id: ospar-elc-c
+      class: entity-level-control
+      title: Information and Communication
+      props:
+      - name: label
+        value: I(c)
+      - name: sort-id
+        value: 1-c
+      parts:
+      - id: ospar-elc-c_smt
+        name: statement
+        prose: 'Adequate information and effective communication are essential to the proper functioning of internal control.
+          The OSP’s information and communication component of internal control include the following:'
+        parts:
+        - id: ospar-elc-c_smt.i
+          name: item
+          props:
+          - name: label
+            value: i.
+          prose: The information system must be documented with procedures for initiating, authorising, recording, processing
+            and reporting FIs’ transactions for proper accountability.
+        - id: ospar-elc-c_smt.ii
+          name: item
+          props:
+          - name: label
+            value: ii.
+          prose: Communication to the OSP's internal and external stakeholders (e.g. FIs, regulatory authorities) for any
+            matters related to ordinary course of business or business disruption/crisis should be done in a timely manner.
+            This may include how the OSP communicates its roles and responsibilities, significant matters relating to the
+            services provided to the FIs, including communication to its staff on how its activities impact the FIs, escalation
+            procedures for reporting exceptions within the OSP and to the FIs, and seeking FIs’ approval prior to any sub-contracting.
+    - id: ospar-elc-d
+      class: entity-level-control
+      title: Monitoring
+      props:
+      - name: label
+        value: I(d)
+      - name: sort-id
+        value: 1-d
+      parts:
+      - id: ospar-elc-d_smt
+        name: statement
+        prose: 'Many aspects of monitoring may be relevant to the services provided to FIs. For example, the OSP may employ
+          internal auditors or other personnel to evaluate the effectiveness of controls over time, either by ongoing activities,
+          periodic evaluations, or combination of the two. OSPs should have processes in place to bring significant issues
+          and concerns identified through such evaluation to the OSPs’ senior management and additionally, if impacting the
+          services provided (e.g. adverse developments), to the FIs.
+
+
+          Monitoring external communications, such as customer complaints, communications from regulators and public advisories
+          issued by relevant authorities (for latest information and guidance on emerging threats that may pose a risk to
+          their business continuity) should be proactively carried out and results of such monitoring should be provided to
+          FIs. Often, these monitoring activities are included as control activities for achieving a specific control objective.'
+    - id: ospar-elc-e
+      class: entity-level-control
+      title: Information Security Policies
+      props:
+      - name: label
+        value: I(e)
+      - name: sort-id
+        value: 1-e
+      parts:
+      - id: ospar-elc-e_smt
+        name: statement
+        prose: 'Information Security (“IS”) policies and procedures are established, documented and reviewed at least every
+          12 months or as and when there are changes. IS policies and procedures should state the person(s) responsible for
+          information security management.
+
+
+          These documents are reviewed and approved by management. Specific security controls for systems and networks are
+          defined to protect the confidentiality, integrity and availability of systems and data. Any identified deviations
+          are documented, tracked and remediated. Deviations which impact the services rendered should be communicated to
+          the FIs immediately.
+
+
+          An information security awareness training programme should be established. The training programme should be conducted
+          for OSP’s staff, sub-contractors and vendors who have access to IT resources and systems at least annually to refresh
+          their knowledge.
+
+
+          The training programme should be reviewed periodically to ensure its contents remain current and relevant. The review
+          should take into consideration emerging risks and the evolving cyber threat landscape.'
+    - id: ospar-elc-f
+      class: entity-level-control
+      title: Human Resource Policies and Procedures
+      props:
+      - name: label
+        value: I(f)
+      - name: sort-id
+        value: 1-f
+      parts:
+      - id: ospar-elc-f_smt
+        name: statement
+        prose: 'The OSP should establish standards for workplace conduct, implement candidate background screening procedures,
+          and conduct enforcement procedures to enable it to meet its commitments and requirements as they relate to the ABS
+          controls objectives and MAS Notice 658 / MAS Notice 1121.
+
+
+          OSP’s staff (including sub-contractor staff) involved in delivering the outsourced services to FIs should understand
+          their responsibilities and be suitable for the roles for which they are employed. The OSP should ensure that individuals
+          considered for employment are adequately screened for experience, professional capabilities, honesty and integrity.
+          Screening should include background checks to assess character, integrity and track record. The following are non-exhaustive
+          examples of OSP staff screening requirements:'
+        parts:
+        - id: ospar-elc-f_smt.i
+          name: item
+          props:
+          - name: label
+            value: i.
+          prose: Subject of any past or current proceedings of a disciplinary or criminal nature;
+        - id: ospar-elc-f_smt.ii
+          name: item
+          props:
+          - name: label
+            value: ii.
+          prose: Convicted of any offence (in particular, that associated with a finding of fraud, misrepresentation or dishonesty);
+        - id: ospar-elc-f_smt.iii
+          name: item
+          props:
+          - name: label
+            value: iii.
+          prose: Accepted civil liability for fraud or misrepresentation; and
+        - id: ospar-elc-f_smt.iv
+          name: item
+          props:
+          - name: label
+            value: iv.
+          prose: Are financially sound.
+        - id: ospar-elc-f_smt.p1
+          name: paragraph
+          ns: urn:x-ospar-oscal:ns
+          prose: 'The listed examples are non-exhaustive and do not necessarily preclude an individual from taking on a particular
+            role within an OSP organisation as screening procedures should be commensurate with the role that the employees
+            are performing.
+
+
+            Contracts with OSP’s staff (including sub-contractor staff) should specify their responsibilities for maintaining
+            confidentiality of customer information in accordance with s47 of the Banking Act (Chapter 19) on Banking Secrecy.'
+    - id: ospar-elc-g
+      class: entity-level-control
+      title: Practices related to Sub-Contracting / Third Parties related to Delivery of Service
+      props:
+      - name: label
+        value: I(g)
+      - name: sort-id
+        value: 1-g
+      parts:
+      - id: ospar-elc-g_smt
+        name: statement
+        prose: 'In the context of these Guidelines, “sub-contractors" or "third parties" will refer specifically only to those
+          organisations used by the OSP for purposes including, but not limited to the following:'
+        parts:
+        - id: ospar-elc-g_smt.l1-i
+          name: item
+          props:
+          - name: label
+            value: i.
+          prose: providing the services;
+        - id: ospar-elc-g_smt.l1-ii
+          name: item
+          props:
+          - name: label
+            value: ii.
+          prose: maintaining and managing OSP's operations in regard to service offering; or
+        - id: ospar-elc-g_smt.l1-iii
+          name: item
+          props:
+          - name: label
+            value: iii.
+          prose: maintaining OSP's IT systems that are deemed critical to the service.
+        - id: ospar-elc-g_smt.p1
+          name: paragraph
+          ns: urn:x-ospar-oscal:ns
+          prose: 'FIs expect sub-contractors/ third parties of OSPs to be managed with the same rigour as the OSPs themselves.
+            Thus, OSP should require and ensure that their sub-contractors/ third parties adhere to the requirements of these
+            Guidelines. OSPs in managing sub-contractors/ third parties should:'
+        - id: ospar-elc-g_smt.l2-i
+          name: item
+          props:
+          - name: label
+            value: i.
+          prose: Obtain approvals from the FIs before engaging sub-contractors/third parties and obtain confirmation from
+            the FIs that customer consent has been obtained in the event of disclosure of FI’s customer information.
+        - id: ospar-elc-g_smt.l2-ii
+          name: item
+          props:
+          - name: label
+            value: ii.
+          prose: Be able to demonstrate due diligence and risk assessment of the sub-contractors/third parties.
+        - id: ospar-elc-g_smt.l2-iii
+          name: item
+          props:
+          - name: label
+            value: iii.
+          prose: Notify the FI within a reasonable time\* (i.e. 30 days) of the engagement of the sub-contractor.
+        - id: ospar-elc-g_smt.l2-iv
+          name: item
+          props:
+          - name: label
+            value: iv.
+          prose: Implement processes to inform and consult the FIs on material changes to the sub-contractors/third parties’
+            operating environment.
+        - id: ospar-elc-g_smt.l2-v
+          name: item
+          props:
+          - name: label
+            value: v.
+          prose: Maintain and conduct a review of its sub-contractors/third parties every 12 months.
+        - id: ospar-elc-g_smt.l2-vi
+          name: item
+          props:
+          - name: label
+            value: vi.
+          prose: Monitor and assess the performance and risk management practices of the sub-contractors/third parties.
+        - id: ospar-elc-g_smt.note1
+          name: note
+          ns: urn:x-ospar-oscal:ns
+          prose: '\*Note: OSPs to define ‘reasonable time’ within their internal policies or within their SLAs with the FIs'
+        - id: ospar-elc-g_smt.p2
+          name: paragraph
+          ns: urn:x-ospar-oscal:ns
+          prose: 'Due diligence and risk assessments of sub-contractors should involve evaluation of relevant information
+            as specified in section 3.3.3 of the MAS Guidelines on Outsourcing (Banks) (e.g. experience and capability of
+            the sub-contractor to implement and support the outsourcing arrangement over the contracted period and financial
+            strength and resources of the sub-contractors). Sub-contracting within the OSP’s group should be subjected to
+            similar due diligence.
+
+
+            OSPs should take note of the requirements of section 3.10 of the MAS Guidelines on Outsourcing (Banks) when outsourcing
+            to a sub-contractor that is operating outside Singapore.
+
+
+            The OSP’s monitoring of its sub-contractors’ activities that affect the services provided to the FIs is another
+            example of monitoring. This form of monitoring may be accomplished through visiting the sub-contractors’ organisation,
+            obtaining and reading reports containing detailed description of the sub-contractors’ controls, or conducting
+            an independent assessment of whether the controls in place are suitably designed and operating effectively throughout
+            the specified period. Results of any such reports and findings made on the OSP and/or its sub-contractors, in
+            relation to the outsourcing arrangement, must be provided to the FIs. Results should be discussed as part of ongoing
+            service discussions.'
+  - id: ospar-gitc
+    class: part
+    title: General Information Technology (IT) Controls
+    props:
+    - name: label
+      value: II
+    groups:
+    - id: ospar-gitc-a
+      class: section
+      title: Logical Security
+      props:
+      - name: label
+        value: II(a)
+      parts:
+      - id: ospar-gitc-a_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that logical access to programmes, data and operating system software
+          is restricted to authorised personnel on a need-to-have basis.
+      controls:
+      - id: ospar-gitc-a-1
+        class: general-it-control
+        title: Logical access to programmes, data, and operating system software is restricted to authorised personnel on
+          a need-to-have basis
+        props:
+        - name: label
+          value: II(a)1
+        - name: sort-id
+          value: 2-a-01
+        - name: contains-cloud-specific
+          value: 'true'
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-gitc-a-1_obj
+          name: objective
+          prose: Logical access to programmes, data, and operating system software is restricted to authorised personnel on
+            a need-to-have basis.
+        - id: ospar-gitc-a-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-a-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: 'Logical access requirements to IT systems and supporting tools, i.e. programmes, tools, data, virtual
+              machines and operating system software are defined. Logical access requirements include the following, where
+              applicable:'
+            parts:
+            - id: ospar-gitc-a-1_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: The principles of ‘never alone’, ‘segregation of duties’, and ‘least privilege’ are applied when granting
+                staff access to information assets so that no one person has access to perform sensitive system functions
+                singly.
+            - id: ospar-gitc-a-1_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: 'Definition of the “least privilege” required by each user group, including privileged users, to:'
+              parts:
+              - id: ospar-gitc-a-1_smt.i.b.b1
+                name: item
+                prose: Production and backup data
+              - id: ospar-gitc-a-1_smt.i.b.b2
+                name: item
+                prose: Sensitive information, including FI’s customer information
+              - id: ospar-gitc-a-1_smt.i.b.b3
+                name: item
+                prose: Commands, services (e.g. application, web and network services) and sensitive files (e.g. system logs
+                  and audit trails)
+              - id: ospar-gitc-a-1_smt.i.b.b4
+                name: item
+                prose: Non-production systems (e.g. UAT and DR environments)
+              - id: ospar-gitc-a-1_smt.i.b.b5
+                name: item
+                prose: Cloud environment (if applicable)
+            - id: ospar-gitc-a-1_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Password management rules and parameters (e.g. password complexity, lockout settings, password history)
+                defined based on recognised industry standards or best practices.
+            - id: ospar-gitc-a-1_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Procedures to manage privileged / system administration accounts (including emergency usage).
+            - id: ospar-gitc-a-1_smt.i.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Implementation of multi-factor authentication for the following
+              parts:
+              - id: ospar-gitc-a-1_smt.i.e.b1
+                name: item
+                prose: all administrative accounts of critical systems, as agreed with FIs; and
+              - id: ospar-gitc-a-1_smt.i.e.b2
+                name: item
+                prose: all accounts on any system used by the OSP and/or FI to access FI's customer information through the
+                  internet.
+              - id: ospar-gitc-a-1_smt.i.e.b3
+                name: item
+                prose: all accounts held by the OSP with privileges to configure public cloud services (e.g. Compute, Storage,
+                  Serverless, Container), especially accounts with top level privileges (e.g. known as the “root user” or
+                  “subscription owner” for some Cloud Service Providers (“CSPs”)). (if applicable)
+          - id: ospar-gitc-a-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Access to IT systems and tools (directly supporting the OSP's service) is only granted based on a documented
+              and approved request, and on a need-to-use basis.
+          - id: ospar-gitc-a-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: All users’ access rights in IT systems and tools (directly supporting the OSP's service), including sub-contractors’
+              access, are reviewed at least annually or in accordance with a frequency agreed with the FIs.
+          - id: ospar-gitc-a-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Access to IT systems and tools (directly supporting the OSP's service) are revoked or disabled promptly
+              when the access is no longer required.
+          - id: ospar-gitc-a-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Access authentication controls for IT systems and tools (directly supporting the OSP’s service) are periodically
+              reviewed with FIs according to the agreed information security requirements/standards.
+          - id: ospar-gitc-a-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: 'Users with elevated access privileges are subjected to strict controls such as:'
+            parts:
+            - id: ospar-gitc-a-1_smt.vi.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Split-password control, never-alone principle, two-factor authentication (“2FA”), etc.
+            - id: ospar-gitc-a-1_smt.vi.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Timely review of privileged users’ activities.
+          - id: ospar-gitc-a-1_smt.vii
+            name: item
+            props:
+            - name: label
+              value: vii.
+            prose: User access and user access management activities are uniquely identified and logged. Access to logs and
+              logging configuration is restricted.
+          - id: ospar-gitc-a-1_smt.viii
+            name: item
+            props:
+            - name: label
+              value: viii.
+            prose: Remote connections to the OSP's internal network via an external network to access the FI's data are encrypted
+              to prevent data leakage. Strong authentication, such as multi-factor authentication, is implemented for all
+              remote connections to OSP's internal network via external networks.
+          - id: ospar-gitc-a-1_smt.ix
+            name: item
+            props:
+            - name: label
+              value: ix.
+            prose: Remote access to the OSP's information asset is only allowed from devices that have been secured according
+              to established security standards.
+          - id: ospar-gitc-a-1_smt.x
+            name: item
+            props:
+            - name: label
+              value: x.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs, and OSPs offering Platform-as-a-Service (“PaaS”)/Infrastructure-as-a-Service (“IaaS”)/Software-as-a-Service
+                (“SaaS”) solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs, and OSPs offering Platform-as-a-Service (“PaaS”)/Infrastructure-as-a-Service
+              (“IaaS”)/Software-as-a-Service (“SaaS”) solutions) Credentials used by system/application services for authentication
+              in the public cloud, such as “access keys”, are changed regularly. If the credentials are not used, they are
+              deleted immediately.
+          - id: ospar-gitc-a-1_smt.xi
+            name: item
+            props:
+            - name: label
+              value: xi.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSP that is integrating public
+              cloud workloads with an on-premise authentication service adopts prevailing best practices in securing such
+              implementations to minimise contagion risk (e.g. security breach in on-premise environment could affect cloud
+              workloads).
+          - id: ospar-gitc-a-1_smt.xii
+            name: item
+            props:
+            - name: label
+              value: xii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs, and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs, and OSPs offering PaaS/IaaS/SaaS solutions) OSP using multiple public cloud
+              services centrally manages security policies over the use of different public cloud services and ensures that
+              the policies are consistently enforced. The OSP adopts solutions to facilitate policy implementation, enforcement,
+              and timely follow-up on non-compliance issues. Examples include, but not limited to, the use of Cloud Access
+              Security Broker (“CASB”) or Secure Access Service Edge (“SASE”).
+            parts:
+            - id: ospar-gitc-a-1_smt.xii.note1
+              name: note
+              ns: urn:x-ospar-oscal:ns
+              prose: 'Note: CASB solutions manage connections between cloud users and CSPs to enforce security and compliance
+                policies for public cloud services. SASE are solutions that combine networking and security services, which
+                may include the capabilities of CASB, to enforce security and compliance policies for public cloud services.'
+          - id: ospar-gitc-a-1_smt.xiii
+            name: item
+            props:
+            - name: label
+              value: xiii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) When securing Application Programming
+              Interfaces (“APIs”), OSP implements fine-grain access control and adopts the principle of least privilege (i.e.
+              strictly limit access to services to what is needed only, with the minimum level of privileges needed). OSP
+              also enforces robust Identity and Access Management (“IAM”) to authenticate service requests, and not rely on
+              implicit trusts when granting access (e.g. allow access based on the static Internet Protocol (‘IP’) addresses
+              of the requestor). For microservices, OSP ensures that prevailing best practices in API security, including
+              secure coding practices, are adopted in the implementation of APIs.
+          - id: ospar-gitc-a-1_smt.xiv
+            name: item
+            props:
+            - name: label
+              value: xiv.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSP implements stringent control
+              over the granting of access to container orchestrators (e.g. Kubernetes), especially the use of the orchestrator
+              administrative account, and the orchestrators’ access to container images.
+          - id: ospar-gitc-a-1_smt.xv
+            name: item
+            props:
+            - name: label
+              value: xv.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSP adopts “Bring-Your-Own-Key”
+              (“BYOK”) and/or “Bring-Your-Own-Encryption” (“BYOE”) cryptographic key management strategies to ensure appropriate
+              control and protection over cryptographic keys used for encrypting sensitive data.
+          - id: ospar-gitc-a-1_smt.xvi
+            name: item
+            props:
+            - name: label
+              value: xvi.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) To secure cryptographic keys
+              used for encrypting sensitive data, OSP generates, stores and manages the keys in a hardware security module
+              (“HSM”) and hosts the HSM in an environment that the OSP has a higher degree of control over (e.g. OSP's own
+              on-premise IT infrastructure) rather than with the CSP.
+          - id: ospar-gitc-a-1_smt.xvii
+            name: item
+            props:
+            - name: label
+              value: xvii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) For cryptographic keys managed
+              by CSPs, OSP ensured that the CSPs’ cryptographic key management policy, standards and procedures are adequate
+              to protect the keys from unauthorised access, usage and disclosure throughout the cryptographic key management
+              life cycle. This includes key generation, distribution, installation, renewal, revocation, recovery and expiry.
+          - id: ospar-gitc-a-1_smt.xviii
+            name: item
+            props:
+            - name: label
+              value: xviii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSPs migrating legacy applications
+              to the public cloud or adopting cloud-native approaches such as microservices architecture, containers and APIs,
+              should adopt prevailing best practices in the design, implementation, maintenance and operations of the public
+              cloud workload. OSPs should consider adopting zero trust principles in the architecture design, where access
+              to public cloud services and resources is evaluated and granted on a per-request and need-to basis.
+          - id: ospar-gitc-a-1_smt.xix
+            name: item
+            props:
+            - name: label
+              value: xix.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) If OSPs adopt a microservice
+              architecture, OSPs should ensure that adequate security controls are in place, including, securing the service
+              discovery mechanism, using service mesh for fine-grained access control to APIs and implementing robust authentication
+              for microservices.
+    - id: ospar-gitc-b
+      class: section
+      title: Physical Security
+      props:
+      - name: label
+        value: II(b)
+      parts:
+      - id: ospar-gitc-b_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that Data Centre (“DC”)/Controlled Areas are resilient and physically
+          secured from internal and external threats.
+      controls:
+      - id: ospar-gitc-b-1
+        class: general-it-control
+        title: Data Centre/Controlled Areas\* are physically secured from internal and external threats
+        props:
+        - name: label
+          value: II(b)1
+        - name: sort-id
+          value: 2-b-01
+        parts:
+        - id: ospar-gitc-b-1_obj
+          name: objective
+          prose: Data Centre/Controlled Areas\* are physically secured from internal and external threats.
+        - id: ospar-gitc-b-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-b-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: 'Access to data centre/controlled areas is restricted:'
+            parts:
+            - id: ospar-gitc-b-1_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Access is physically restricted (e.g. via card access, biometric systems, ISO standard locks) to authorised
+                personnel on a need-to-have basis only. Access mechanism may include ‘anti-passback’ feature to prevent use
+                of card access for multiple entries and mantraps to prevent tailgating.
+            - id: ospar-gitc-b-1_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Requests for access to DCs by employees, contractors and third parties, and visitors must be approved
+                and documented.
+            - id: ospar-gitc-b-1_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: All visitors must be registered. Visitors are issued with clear identification (e.g. an ID badge) and
+                escorted by authorised personnel at all times.
+            - id: ospar-gitc-b-1_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: All entry points with possibility of unauthorised entry including public areas and loading bays are controlled
+                and isolated from information processing facilities.
+            - id: ospar-gitc-b-1_smt.i.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Access to keys and other physical access devices is restricted to authorised staff and replaced or changed
+                promptly if they have been misplaced, lost or stolen.
+          - id: ospar-gitc-b-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: All access points, including windows, to controlled areas are fitted with audible intruder alarms that
+              are monitored by security personnel. Doors are fitted with door-ajar alarms. The alarm system is tested regularly,
+              and the test documentation is retained.
+          - id: ospar-gitc-b-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Entries and exits to secure areas have an audit trail (e.g. entry/exit log from door access system, CCTV
+              footage, manual log-book with visitor’s name, date, time, purpose, escort’s name, etc.).
+          - id: ospar-gitc-b-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Access rights to data centre/controlled areas are reviewed at a frequency agreed with FIs. Access violations
+              are monitored, followed up and reported to FIs in accordance with the SLA.
+          - id: ospar-gitc-b-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Physical access credentials are revoked or disabled promptly when not required. Inventory of security access
+              cards is managed and damaged or lost cards are invalidated or revoked in the access control system promptly.
+          - id: ospar-gitc-b-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: 'An appropriate risk assessment, such as a Threat and Vulnerability Risk Assessment (“TVRA”) is performed
+              for the data centre, server room and any other controlled areas housing FIs’ customer or sensitive information
+              (e.g. hardcopy FIs’ customer information, FIs’ procedural documents, contractual documentation, etc.).
+
+
+              If an OSP shares premises with other organisations, a risk-based TVRA or similar appropriate risk assessment
+              is performed to assess the relevant control areas, e.g. data centre, server room and/or any other relevant physical
+              premises. The scope of the assessment is agreed with the FIs and includes, at a minimum, the physical perimeter
+              and surrounding environment of the premises. The assessment includes various threat scenarios such as theft,
+              explosives, arson and internal sabotage.
+
+
+              Gaps identified by the risk assessment are remediated timely.'
+            parts:
+            - id: ospar-gitc-b-1_smt.vi.note1
+              name: note
+              ns: urn:x-ospar-oscal:ns
+              prose: 'Note: Before FIs procure DC services from the OSP, FIs will ensure that all identified risks are adequately
+                addressed. Subsequent assessments may also be conducted at a frequency commensurate with the level and type
+                of risk to which a DC is exposed as well as the criticality of the DC to the FIs. The assessment is reviewed
+                whenever there is a significant change in the threat landscape or when there is a material change in the data
+                centre''s environment. FIs will obtain and assess the TVRA report from the OSP on the DC facility.'
+        - id: ospar-gitc-b-1_note1
+          name: note
+          ns: urn:x-ospar-oscal:ns
+          prose: \*Controlled area refers to an area managed by the OSP which is considered critical to the service provisioning
+            (e.g. areas where sensitive FI information is stored/hosted/processed)
+      - id: ospar-gitc-b-2
+        class: general-it-control
+        title: Data Centre/ Controlled areas are resilient to protect IT assets
+        props:
+        - name: label
+          value: II(b)2
+        - name: sort-id
+          value: 2-b-02
+        parts:
+        - id: ospar-gitc-b-2_obj
+          name: objective
+          prose: Data Centre/ Controlled areas are resilient to protect IT assets
+        - id: ospar-gitc-b-2_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-b-2_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: 'The following environmental control feature are installed at the data centre:'
+            parts:
+            - id: ospar-gitc-b-2_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Locked cabinets for systems and network equipment
+            - id: ospar-gitc-b-2_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Uninterruptible power supply backup and generators
+            - id: ospar-gitc-b-2_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Air conditioning and humidity control systems
+            - id: ospar-gitc-b-2_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Temperature and humidity sensors
+            - id: ospar-gitc-b-2_smt.i.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Fire and smoke detection systems
+            - id: ospar-gitc-b-2_smt.i.f
+              name: item
+              props:
+              - name: label
+                value: f.
+              prose: Water sprinkler system (dry-piped)
+            - id: ospar-gitc-b-2_smt.i.g
+              name: item
+              props:
+              - name: label
+                value: g.
+              prose: FM200 or other fire suppression system
+            - id: ospar-gitc-b-2_smt.i.h
+              name: item
+              props:
+              - name: label
+                value: h.
+              prose: Raised floor
+            - id: ospar-gitc-b-2_smt.i.i
+              name: item
+              props:
+              - name: label
+                value: i.
+              prose: CCTV cameras
+            - id: ospar-gitc-b-2_smt.i.j
+              name: item
+              props:
+              - name: label
+                value: j.
+              prose: Water leakage detection system
+            - id: ospar-gitc-b-2_smt.i.k
+              name: item
+              props:
+              - name: label
+                value: k.
+              prose: Hand-held fire extinguishers
+          - id: ospar-gitc-b-2_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Environment control equipment are inspected, tested and maintained regularly.
+          - id: ospar-gitc-b-2_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: The data centre/controlled area's physical security and environmental controls are monitored on a 24 by
+              7 basis. Appropriate escalation, response plans and procedures for physical and environmental incidents at data
+              centres are established and tested.
+    - id: ospar-gitc-c
+      class: section
+      title: Change Management
+      props:
+      - name: label
+        value: II(c)
+      parts:
+      - id: ospar-gitc-c_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that changes to applications, system software and network components
+          are assessed, approved, tested, implemented and reviewed in a controlled manner.
+      controls:
+      - id: ospar-gitc-c-1
+        class: general-it-control
+        title: Changes to applications, systems software and network components are assessed, approved, tested, implemented
+          and reviewed in a controlled manner
+        props:
+        - name: label
+          value: II(c)1
+        - name: sort-id
+          value: 2-c-01
+        - name: contains-cloud-specific
+          value: 'true'
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-gitc-c-1_obj
+          name: objective
+          prose: Changes to applications, systems software and network components are assessed, approved, tested, implemented
+            and reviewed in a controlled manner.
+        - id: ospar-gitc-c-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-c-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: A formal change management process is established, documented and reviewed at least every 12 months or
+              when there are changes to the process. The change management process is reviewed and approved by management.
+          - id: ospar-gitc-c-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: 'The following controls exist for changes applied to the production environment:'
+            parts:
+            - id: ospar-gitc-c-1_smt.ii.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Changes are initiated through a formal change request process and classified according to the priority,
+                risk and impact of the changes. The stability and security implications of the changes to the production environment
+                should be considered.
+            - id: ospar-gitc-c-1_smt.ii.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Change requests are approved in accordance with an established Change Authority Matrix (includes internal
+                and FIs’ approvals), as agreed with FIs.
+            - id: ospar-gitc-c-1_smt.ii.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: A risk and impact analysis of the change request in relation to existing infrastructure, network, up-
+                stream and downstream systems is performed. The analysis should also cover factors such as security and implications
+                of the change in relation to other information assets.
+            - id: ospar-gitc-c-1_smt.ii.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: All changes are tested and appropriate approvals are obtained prior to implementation. System Integration
+                Testing (“SIT”) and User Acceptance Testing (“UAT”) test plans are prepared and signed off in accordance with
+                the established Change Authority Matrix.
+            - id: ospar-gitc-c-1_smt.ii.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Emergency change escalation protocols (e.g. by telephone and email) and approval requirements are established
+                in the change approval matrix (includes internal and FI approvals) as agreed with FIs. Documented approvals
+                are obtained after the emergency change.
+            - id: ospar-gitc-c-1_smt.ii.f
+              name: item
+              props:
+              - name: label
+                value: f.
+              prose: A rollback plan is established to revert the information asset to the previous state if a problem arises
+                during or after the change implementation and OSP should perform a backup of the information asset prior to
+                the change implementation.
+            - id: ospar-gitc-c-1_smt.ii.g
+              name: item
+              props:
+              - name: label
+                value: g.
+              prose: System logging is enabled to record activities that are performed during the migration process.
+            - id: ospar-gitc-c-1_smt.ii.h
+              name: item
+              props:
+              - name: label
+                value: h.
+              prose: Segregation of duties is enforced so that no single individual has the ability to develop, compile and
+                migrate object codes into the production environment.
+            - id: ospar-gitc-c-1_smt.ii.i
+              name: item
+              props:
+              - name: label
+                value: i.
+              prose: Disaster recovery environment versions are updated timely after production migration is successfully
+                completed.
+          - id: ospar-gitc-c-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Change risk categories are used to determine approval requirements in accordance with the defined change
+              management process. Appropriate escalation levels and approvals are established and documented in the Change
+              Authority matrix for changes.
+          - id: ospar-gitc-c-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Segregation of environments for development, testing, staging and production is established. UAT data are
+              anonymised. If UAT contains production data, the environment must be subject to appropriate production level
+              controls.
+          - id: ospar-gitc-c-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSP may consider using immutable
+              workloads to ensure the security and stability of workload components especially during software upgrades or
+              security patching. For immutable workloads, server instances are replaced with updated images instead of being
+              changed. Should a server instance be compromised, it could be replaced with a clean image quickly. Testing should
+              be performed on immutable workloads images to ensure that an image is secure and stable before implementing
+              in the production environment.
+    - id: ospar-gitc-d
+      class: section
+      title: Incident Management
+      props:
+      - name: label
+        value: II(d)
+      parts:
+      - id: ospar-gitc-d_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that all system and network processing issues are resolved in a
+          timely and controlled manner.
+      controls:
+      - id: ospar-gitc-d-1
+        class: general-it-control
+        title: System and network processing issues are resolved in a timely manner
+        props:
+        - name: label
+          value: II(d)1
+        - name: sort-id
+          value: 2-d-01
+        parts:
+        - id: ospar-gitc-d-1_obj
+          name: objective
+          prose: System and network processing issues are resolved in a timely manner.
+        - id: ospar-gitc-d-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-d-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: A formal documented incident management process, including cyber related incidents, is established and
+              reviewed at least every 12 months.
+          - id: ospar-gitc-d-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Roles and responsibilities of staff involved in the incident management process are clearly documented
+              in the procedures, including recording, analysing, escalation, decision-making, remediating and monitoring of
+              problems and incidents.
+          - id: ospar-gitc-d-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Clear escalation and resolution protocols and timelines are documented. FIs are notified of incidents and
+              the notifications are tracked and reported to FIs in accordance with the SLA.
+          - id: ospar-gitc-d-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: 'Incidents are recorded and tracked with the following information:'
+            parts:
+            - id: ospar-gitc-d-1_smt.iv.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Severity.
+            - id: ospar-gitc-d-1_smt.iv.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Client/ FI information.
+            - id: ospar-gitc-d-1_smt.iv.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Date and time of incident/problem.
+            - id: ospar-gitc-d-1_smt.iv.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Description of incident/problem.
+            - id: ospar-gitc-d-1_smt.iv.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Incident type.
+            - id: ospar-gitc-d-1_smt.iv.f
+              name: item
+              props:
+              - name: label
+                value: f.
+              prose: Application, systems and / or network component impacted.
+            - id: ospar-gitc-d-1_smt.iv.g
+              name: item
+              props:
+              - name: label
+                value: g.
+              prose: Escalation and approvals.
+            - id: ospar-gitc-d-1_smt.iv.h
+              name: item
+              props:
+              - name: label
+                value: h.
+              prose: Actions taken to resolve the incident or problem, including date and time action was taken.
+            - id: ospar-gitc-d-1_smt.iv.i
+              name: item
+              props:
+              - name: label
+                value: i.
+              prose: Post-mortem on incidents that includes root-cause analysis.
+          - id: ospar-gitc-d-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Problems attributing to the incidents are analysed to address root cause and to prevent recurrence. Trend
+              analysis of past incidents is performed to facilitate the identification and prevention of similar problems.
+          - id: ospar-gitc-d-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: System events or alerts should be configured to provide an early indication of issues that may affect its
+              IT systems’ performance and security. It should be actively monitored so that prompt measures can be taken to
+              address the issues early.
+    - id: ospar-gitc-e
+      class: section
+      title: Backup and Disaster Recovery
+      props:
+      - name: label
+        value: II(e)
+      parts:
+      - id: ospar-gitc-e_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that information systems recovery plans are documented, approved,
+          tested and maintained. Backups are performed and securely stored.
+      controls:
+      - id: ospar-gitc-e-1
+        class: general-it-control
+        title: Backups are performed and securely stored
+        props:
+        - name: label
+          value: II(e)1
+        - name: sort-id
+          value: 2-e-01
+        - name: contains-cloud-specific
+          value: 'true'
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-gitc-e-1_obj
+          name: objective
+          prose: Backups are performed and securely stored.
+        - id: ospar-gitc-e-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-e-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Backup policies and procedures are documented. The policies and procedures are reviewed and updated at
+              least every 12 months or whenever there are changes impacting backup procedures.
+          - id: ospar-gitc-e-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Backup and restoration processes are implemented such that FIs’ critical information systems can be recovered.
+              Backup procedures are formally documented based on the data backup and recovery requirements of FIs. These include
+              a data retention policy and procedures designed to meet business, statutory and regulatory requirements as agreed
+              with FIs.
+          - id: ospar-gitc-e-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Backup media should be stored offline or at an offsite location.
+          - id: ospar-gitc-e-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Backup logs associated with system level backups are generated and remedial action is taken for unsuccessful
+              backups.
+          - id: ospar-gitc-e-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Data backed up to external media such as tapes are encrypted using industry-standard cryptography.
+          - id: ospar-gitc-e-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: Tape (or other media) tracking/management system is used to manage the physical location of backup tapes.
+              This includes a full inventory of all tapes on and off site, tapes retention periods and tapes due for rotation.
+          - id: ospar-gitc-e-1_smt.vii
+            name: item
+            props:
+            - name: label
+              value: vii.
+            prose: Tape (or other media) inventory checks are performed at least every 12 months such that all tapes are accounted
+              for.
+          - id: ospar-gitc-e-1_smt.viii
+            name: item
+            props:
+            - name: label
+              value: viii.
+            prose: The OSP should periodically test the restoration of its system and data backups to validate the effectiveness
+              of its backup restoration procedures.
+          - id: ospar-gitc-e-1_smt.ix
+            name: item
+            props:
+            - name: label
+              value: ix.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: '(Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) For cloud workloads that require
+              high availability, OSP’s should ensure that:'
+            parts:
+            - id: ospar-gitc-e-1_smt.ix.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: the CSP has appropriate cloud redundancy or fault-tolerant capability (e.g. use of the auto-scaling feature
+                to enable auto-recovery of failed services) and that the appropriate features are enabled for the cloud workloads.
+            - id: ospar-gitc-e-1_smt.ix.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Cloud workloads could also be deployed in multiple geographically separated data centres (e.g. “zones”
+                or “regions”) to mitigate location-specific issues that may disrupt the delivery of public cloud service.
+            - id: ospar-gitc-e-1_smt.ix.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: OSPs need to carefully consider and plan their cloud adoption to ensure that the resiliency and availability
+                of the cloud services commensurate with their needs.
+      - id: ospar-gitc-e-2
+        class: general-it-control
+        title: Information systems recovery are documented, approved and maintained
+        props:
+        - name: label
+          value: II(e)2
+        - name: sort-id
+          value: 2-e-02
+        parts:
+        - id: ospar-gitc-e-2_obj
+          name: objective
+          prose: Information systems recovery are documented, approved and maintained.
+        - id: ospar-gitc-e-2_smt
+          name: statement
+          prose: Disaster Recovery (“DR”) refers to disaster recovery capabilities as a whole for services rendered and not
+            specific to information technology (“IT”) disaster recovery only.
+          parts:
+          - id: ospar-gitc-e-2_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: A DR strategy is established and maintained based on business, operational and information technology needs
+              of FI. IT Disaster Recovery plan should cover the full recovery process for the business function supporting
+              the services rendered to the FIs, from immediate response to the resumption of business functions to minimum
+              levels, and the subsequent restoration to business-as-usual (“BAU”) levels. Operational considerations include
+              geographical requirements, on-site and off-site redundancy requirements.
+            parts:
+            - id: ospar-gitc-e-2_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Different scenarios such as major system outages, hardware malfunction, operating errors or security
+                incidents, as well as a total incapacitation of the primary processing centre are considered in a DR plan.
+            - id: ospar-gitc-e-2_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: DR facilities shall accommodate the capacity for recovery as agreed with FIs.
+            - id: ospar-gitc-e-2_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: OSP should notify the FIs of any substantial changes in the OSPs’ DR plans and of any adverse development
+                that could substantially impact the services provided to the FIs.
+            - id: ospar-gitc-e-2_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Roles and responsibilities of relevant personnel in the recovery process should be included in the plan.
+            - id: ospar-gitc-e-2_smt.i.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: The OSP should operate from its recovery, secondary or alternate site periodically so as to have the
+                assurance that its infrastructure and systems at these sites are able to support business needs for an extended
+                period of time when production systems failover from the primary or production site.
+          - id: ospar-gitc-e-2_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: DR strategy and plan, including activation and escalation process is reviewed, updated and tested at least
+              every 12 months. In consultation with FIs this may be conducted more frequently depending on the changing technology
+              conditions and operational requirements. FIs should also be permitted to participate in DR tests as appropriate.
+          - id: ospar-gitc-e-2_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: DR exercises (i.e. testing plans and results) should be documented with action plans to resolve and retest
+              exceptions. The results of DR exercises should be communicated to the FIs.
+          - id: ospar-gitc-e-2_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Disaster Recovery plans include established procedures to meet recovery time objectives (“RTO”) and recovery
+              point objectives (“RPO”) of systems and data. Defined RTO, RPO and resumption operating capacities should be
+              validated by management during the annual test of the DR strategy and plan.
+          - id: ospar-gitc-e-2_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Redundancy plans for single points of failure which can bring down the entire system or network are developed
+              and implemented.
+          - id: ospar-gitc-e-2_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: 'Disaster recovery test plan should include the test objectives and scope, test scenarios, test scripts
+              with details of the activities to be performed during and after testing, system recovery procedures, and the
+              criteria for measuring the success of the test. The testing of disaster recovery plan should comprise:'
+            parts:
+            - id: ospar-gitc-e-2_smt.vi.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: various plausible disruption scenarios, including full and partial incapacitation of the primary or production
+                site and major system failures; and
+            - id: ospar-gitc-e-2_smt.vi.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: recovery dependencies between information assets, including those managed by third parties.
+    - id: ospar-gitc-f
+      class: section
+      title: Network and Security Management
+      props:
+      - name: label
+        value: II(f)
+      parts:
+      - id: ospar-gitc-f_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that systems and network controls are implemented based on FIs’
+          business needs.
+      controls:
+      - id: ospar-gitc-f-1
+        class: general-it-control
+        title: Systems and network controls are implemented based on clients’ business needs
+        props:
+        - name: label
+          value: II(f)1
+        - name: sort-id
+          value: 2-f-01
+        - name: contains-cloud-specific
+          value: 'true'
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-gitc-f-1_obj
+          name: objective
+          prose: Systems and network controls are implemented based on clients’ business needs.
+        - id: ospar-gitc-f-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-f-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Security baseline standards (i.e. system security baseline settings and configuration rules) are defined
+              for the various middleware, operating system, databases and network devices to ensure consistent application
+              of security configurations and harden systems to the required level of protection. Regular checks against baseline
+              standards are carried out to monitor compliance.
+          - id: ospar-gitc-f-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Endpoint protection is implemented to protect the OSP from malware infection and address common delivery
+              channels of malware, such as malicious links, websites, email attachments or infected removable storage media.
+              Procedures are implemented to ensure that anti-malware signatures are kept up-to-date and the systems are regularly
+              scanned for malicious files or anomalous activities. Detected threats are quarantined and removed appropriately.
+          - id: ospar-gitc-f-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Patch management procedures are established and include maintaining an up-to-date inventory of hardware
+              and software platforms used (including open source platforms) to facilitate patching and vulnerability monitoring,
+              timely monitoring, reviewing, testing and application of vendor provided patches, and prioritising security
+              patches to address known vulnerabilities. The timeframe for implementing patches on critical system and security
+              vulnerability is agreed with the FIs.
+          - id: ospar-gitc-f-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Deviations from security policies/ standards are documented and mitigating controls are implemented to
+              reduce the risks. Deviations are tracked and remediated appropriately. Outstanding deviations are reviewed at
+              least every 12 months. Deviations which impact the services rendered to the FIs are reported to the FIs.
+          - id: ospar-gitc-f-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: File integrity checks are in place to detect unauthorised changes (e.g. databases, files, programmes and
+              system configuration).
+          - id: ospar-gitc-f-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: Network security controls are deployed to protect the internal network. These include firewalls and intrusion
+              detection-prevention devices (including denial-of-service security appliances where appropriate) between internal
+              and external networks as well as between geographically separate sites, if applicable. Network surveillance
+              and security monitoring procedures (e.g. network scanners, intrusion detectors and security alerts) are also
+              established. These controls are documented, reviewed and updated at least every 12 months.
+          - id: ospar-gitc-f-1_smt.vii
+            name: item
+            props:
+            - name: label
+              value: vii.
+            prose: Rules for network security devices are backed up and reviewed regularly for appropriateness and relevance.
+          - id: ospar-gitc-f-1_smt.viii
+            name: item
+            props:
+            - name: label
+              value: viii.
+            prose: Procedures are implemented to ensure that a security operations centre or acquired managed security services
+              or any equivalent measures are in place to facilitate continuous monitoring and analysis of cyber events.
+          - id: ospar-gitc-f-1_smt.ix
+            name: item
+            props:
+            - name: label
+              value: ix.
+            prose: Security system events are logged, retained, and monitored and analysed to ensure timely escalation to
+              relevant stakeholders regarding suspicious or anomalous system activities or user behaviour.
+          - id: ospar-gitc-f-1_smt.x
+            name: item
+            props:
+            - name: label
+              value: x.
+            prose: Security system events logging configurations are documented in the security baselines.
+          - id: ospar-gitc-f-1_smt.xi
+            name: item
+            props:
+            - name: label
+              value: xi.
+            prose: Information assets are grouped into network segments based on the criticality of systems, the system’s
+              functional role (e.g. database and application) or the sensitivity of the data.
+          - id: ospar-gitc-f-1_smt.xii
+            name: item
+            props:
+            - name: label
+              value: xii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering SaaS/PaaS/IaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering SaaS/PaaS/IaaS solutions) The OSP feeds cyber-related
+              information on public cloud workloads into its enterprise-wide IT security monitoring services to facilitate
+              continuous monitoring and analysis of cyber events.
+          - id: ospar-gitc-f-1_smt.xiii
+            name: item
+            props:
+            - name: label
+              value: xiii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering SaaS/PaaS/IaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering SaaS/PaaS/IaaS solutions) The OSP's incident response,
+              handling and investigation processes are adapted for public cloud workloads.
+    - id: ospar-gitc-g
+      class: section
+      title: Security Incident Response
+      props:
+      - name: label
+        value: II(g)
+      parts:
+      - id: ospar-gitc-g_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that appropriate personnel within the OSP are contacted and immediate
+          action is taken in response to a security incident. Requirements in the relevant notices such as the MAS TRM Notice
+          are adhered to.
+      controls:
+      - id: ospar-gitc-g-1
+        class: general-it-control
+        title: Appropriate personnel are contacted and immediate action taken in response to a security incident
+        props:
+        - name: label
+          value: II(g)1
+        - name: sort-id
+          value: 2-g-01
+        - name: contains-cloud-specific
+          value: 'true'
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-gitc-g-1_obj
+          name: objective
+          prose: Appropriate personnel are contacted and immediate action taken in response to a security incident.
+        - id: ospar-gitc-g-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-g-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: An Incident Response Plan is established that documents specific procedures that govern responses to different
+              types of security incidents (e.g. physical, data, network, system, virtualisation, cyber threats, Internet of
+              Things or Cyber security). The roles and responsibilities of staff involved in responding to each security incident
+              are clearly defined. Specifically for cyber threats, the plan should describe communication, coordination and
+              response procedures to address plausible cyber threat scenarios. A process should be in place to investigate
+              and identify the security or control deficiencies that resulted in the security breach. The investigation should
+              also evaluate the full extent of the impact to the FI.
+          - id: ospar-gitc-g-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Security response procedures are reviewed and scenarios are tested every 12 months and the Incident Response
+              Plan is updated where necessary.
+          - id: ospar-gitc-g-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: When an incident is detected or reported, the defined incident management process is initiated by authorised
+              personnel. The incident severity level and escalation process are pre-agreed with FIs. FIs should be notified
+              immediately upon discovery and an Incident Report should be provided post-event.
+          - id: ospar-gitc-g-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSPs should avoid performing
+              security monitoring of on-premise applications or infrastructure, and public cloud workloads in silo. OSPs should
+              feed cyber-related information on public cloud workloads into their respective enterprise-wide IT security monitoring
+              services to facilitate continuous monitoring and analysis of cyber events.
+          - id: ospar-gitc-g-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS/SaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS SaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: (Cloud specific control - CSPs and OSPs offering PaaS/IaaS/SaaS solutions) OSPs should ensure that their
+              incident response, handling and investigation processes are adapted for public cloud workloads.
+    - id: ospar-gitc-h
+      class: section
+      title: System Vulnerability Assessments
+      props:
+      - name: label
+        value: II(h)
+      parts:
+      - id: ospar-gitc-h_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that vulnerability assessments and penetration testing are conducted
+          regularly to detect and remediate security vulnerabilities in the IT environment.
+      controls:
+      - id: ospar-gitc-h-1
+        class: general-it-control
+        title: Vulnerability Assessments
+        props:
+        - name: label
+          value: II(h)1
+        - name: sort-id
+          value: 2-h-01
+        parts:
+        - id: ospar-gitc-h-1_obj
+          name: objective
+          prose: Vulnerability Assessments
+        - id: ospar-gitc-h-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-h-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Vulnerability assessment (“VA”) policies and procedures are documented and reviewed at least every 12 months
+              or whenever there are changes.
+          - id: ospar-gitc-h-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: The OSP continually monitors emergent security exploits and perform regular VAs of its IT environment against
+              common and emergent internal and external security threats. The frequency of the VAs is agreed with FIs based
+              on the FIs’ risk assessments. The VA scope minimally includes vulnerability discovery, identification of weak
+              security configurations, and open network ports, as well as application vulnerabilities. For web-based systems,
+              the VA scope includes checks on common web-based vulnerabilities.
+      - id: ospar-gitc-h-2
+        class: general-it-control
+        title: Penetration Testing
+        props:
+        - name: label
+          value: II(h)2
+        - name: sort-id
+          value: 2-h-02
+        parts:
+        - id: ospar-gitc-h-2_obj
+          name: objective
+          prose: Penetration Testing
+        - id: ospar-gitc-h-2_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-h-2_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Penetration testing (“PT”) policies and procedures are documented and reviewed at least every 12 months
+              or whenever there are changes.
+          - id: ospar-gitc-h-2_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: PTs are performed to simulate attacks of the IT systems. PTs of Internet facing systems are performed at
+              least every 12 months.
+      - id: ospar-gitc-h-3
+        class: general-it-control
+        title: Timely Remediation
+        props:
+        - name: label
+          value: II(h)3
+        - name: sort-id
+          value: 2-h-03
+        parts:
+        - id: ospar-gitc-h-3_obj
+          name: objective
+          prose: Timely Remediation
+        - id: ospar-gitc-h-3_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-h-3_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Issues identified via the VAs and PTs are remediated promptly and revalidated to ensure that the identified
+              gaps are fully resolved.
+          - id: ospar-gitc-h-3_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Procedures for fixing issues identified by VAs and PTs are documented and reviewed at least every 12 months
+              or whenever there are changes.
+    - id: ospar-gitc-i
+      class: section
+      title: Technology Refresh Management
+      props:
+      - name: label
+        value: II(i)
+      parts:
+      - id: ospar-gitc-i_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that software and hardware components used in the production and
+          disaster recovery environment are refreshed timely.
+      controls:
+      - id: ospar-gitc-i-1
+        class: general-it-control
+        title: Production and disaster recovery systems and software are replaced timely
+        props:
+        - name: label
+          value: II(i)1
+        - name: sort-id
+          value: 2-i-01
+        parts:
+        - id: ospar-gitc-i-1_obj
+          name: objective
+          prose: Production and disaster recovery systems and software are replaced timely.
+        - id: ospar-gitc-i-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-i-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: An Information Asset Management practice should be in place to manage information assets that support the
+              service provided to FIs. The practice must require information assets to be classified according to their security
+              classification or criticality and to contain defined ownership, roles and responsibilities of the staff managing
+              the assets.
+          - id: ospar-gitc-i-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: An inventory of all information assets that support the service provided to FIs should be in place. It
+              should be reviewed periodically and updated whenever there are changes.
+          - id: ospar-gitc-i-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: A Technology Refresh Plan for the replacement of hardware and software should be developed before they
+              reach End-Of-Support (“EOS”). A risk assessment for hardware and software approaching EOS date should be conducted
+              to evaluate the risks of their continued use and effective risk mitigation measures should be implemented.
+          - id: ospar-gitc-i-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: The OSP should inform FIs if there is any dispensation plan for the continued use of outdated and unsupported
+              hardware and software.
+          - id: ospar-gitc-i-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: When decommissioning IT systems, the OSP should ensure that the FI's information is securely destroyed
+              / purged from the system to prevent data leakage. Evidence of the secure destruction / purge should be provided
+              to the FI.
+    - id: ospar-gitc-j
+      class: section
+      title: Data Security
+      props:
+      - name: label
+        value: II(j)
+      parts:
+      - id: ospar-gitc-j_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that comprehensive data loss prevention policies and measures have
+          been adopted to detect and prevent unauthorised access, modification, copying or transmission of the FI’s confidential
+          data.
+      controls:
+      - id: ospar-gitc-j-1
+        class: general-it-control
+        title: Data security policies and measures have been implemented
+        props:
+        - name: label
+          value: II(j)1
+        - name: sort-id
+          value: 2-j-01
+        parts:
+        - id: ospar-gitc-j-1_obj
+          name: objective
+          prose: Data security policies and measures have been implemented.
+        - id: ospar-gitc-j-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-j-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: 'Confidential data managed by OSP should be identified. A documented inventory of data detailing data storage,
+              data flow and data access strategy is established.
+
+
+              Comprehensive data loss prevention policies and measures are implemented to detect and prevent unauthorised
+              access, modification, copying, or transmission of its confidential data, taking into consideration the following:'
+            parts:
+            - id: ospar-gitc-j-1_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: data in motion - data that traverses a network or that is transported between sites;
+            - id: ospar-gitc-j-1_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: data at rest - data in endpoint devices such as notebooks, personal computers, portable storage devices
+                and mobile devices, as well as data in systems such as files stored on servers, databases, backup media and
+                storage platforms (e.g. cloud); and
+            - id: ospar-gitc-j-1_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: data in use - data that is being used or processed by a system.
+          - id: ospar-gitc-j-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Measures to prevent and detect data theft and unauthorised modification in systems and endpoint devices
+              are implemented.
+          - id: ospar-gitc-j-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Only authorised data storage media, systems and endpoint devices are allowed to communicate, transfer,
+              or store confidential data into or out of the OSP's environment.
+          - id: ospar-gitc-j-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Security measures are implemented to prevent and detect the use of unauthorised internet services which
+              allow users to communicate or store confidential data. Examples of such services include social media, cloud
+              storage and file sharing, emails, and messaging applications.
+          - id: ospar-gitc-j-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: The use of sensitive production data in non-production environments is restricted. In situations where
+              such data needs to be used in non-production environments, proper approval is obtained from the FIs, and appropriate
+              controls are implemented in non-production environments to manage the access and removal of such data to prevent
+              data leakage. Such data is masked where possible.
+    - id: ospar-gitc-k
+      class: section
+      title: Cryptography
+      props:
+      - name: label
+        value: II(k)
+      parts:
+      - id: ospar-gitc-k_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that industry-accepted cryptographic controls have been implemented
+          to protect data confidentiality, maintain data integrity and authenticity.
+      controls:
+      - id: ospar-gitc-k-1
+        class: general-it-control
+        title: Cryptographic controls have been implemented
+        props:
+        - name: label
+          value: II(k)1
+        - name: sort-id
+          value: 2-k-01
+        parts:
+        - id: ospar-gitc-k-1_obj
+          name: objective
+          prose: Cryptographic controls have been implemented.
+        - id: ospar-gitc-k-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-k-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: 'Industry-accepted cryptography standards agreed with FIs are deployed to protect FIs’ customer information
+              and other sensitive data in accordance with the MAS Technology Risk Management (“TRM”) guidelines:'
+            parts:
+            - id: ospar-gitc-k-1_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Stored in all type of end-point devices (e.g. notebooks, personal computers, portable storage devices
+                and mobile devices).
+            - id: ospar-gitc-k-1_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Transmitted between terminals and hosts, through networks and between sites (e.g. primary and recovery
+                sites).
+            - id: ospar-gitc-k-1_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Stored in computer storage, including servers, databases, backup media and storage platforms (e.g. storage
+                area network (“SAN”)).
+            - id: ospar-gitc-k-1_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Electronically transmitted to external parties (where permissible). When transmitted electronically to
+                external parties (e.g. via email), the decryption key are communicated to the intended recipient via a separate
+                channel (e.g. via telephone call).
+          - id: ospar-gitc-k-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: 'Organisational wide cryptographic key management policy, standards and procedures covering key generation,
+              testing, distribution, installation, renewal, revocation, recovery and expiry are established. A policy is established
+              for the management of compromised cryptographic key. It defines the plan of the OSP to revoke and replace the
+              key and all other keys whose security could also be compromised as a result of the exposed key.
+
+
+              The policies, standards and procedures are reviewed and updated every 12 months for any updates or changes to
+              cryptographic algorithms and standards.'
+          - id: ospar-gitc-k-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: 'Appropriate measures are established to ensure that keys are securely generated and protected from unauthorised
+              disclosure:'
+            parts:
+            - id: ospar-gitc-k-1_smt.iii.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Any cryptographic key or sensitive data used to generate or derive the keys is protected or securely
+                destroyed after the key is generated.
+            - id: ospar-gitc-k-1_smt.iii.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Cryptographic keys are managed, processed and stored in hardened and tamper resistant systems (e.g. by
+                using a hardware security module, software key managers.
+            - id: ospar-gitc-k-1_smt.iii.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Cryptographic keys are only used for a single purpose.
+          - id: ospar-gitc-k-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: 'Appropriate lifespan of each cryptographic key is determined based on the following factors:'
+            parts:
+            - id: ospar-gitc-k-1_smt.iv.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Sensitivity of the data.
+            - id: ospar-gitc-k-1_smt.iv.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Criticality of the system to be protected.
+            - id: ospar-gitc-k-1_smt.iv.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Threats and risks that the data or system may be exposed to.
+            - id: ospar-gitc-k-1_smt.iv.p1
+              name: paragraph
+              ns: urn:x-ospar-oscal:ns
+              prose: The cryptographic key is securely replaced, before it expires at the end of its lifespan.
+          - id: ospar-gitc-k-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Cryptographic keys are backed up and recoverable. Backup of the keys is accorded with a high level of protection.
+    - id: ospar-gitc-l
+      class: section
+      title: Software Application Development and Management
+      props:
+      - name: label
+        value: II(l)
+      parts:
+      - id: ospar-gitc-l_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that policies and measures relating to secure coding, source code
+          review and application security testing have been implemented.
+      controls:
+      - id: ospar-gitc-l-1
+        class: general-it-control
+        title: Policies and measures relating to secure coding, source code review and application testing have been implemented
+        props:
+        - name: label
+          value: II(l)1
+        - name: sort-id
+          value: 2-l-01
+        - name: contains-cloud-specific
+          value: 'true'
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-gitc-l-1_obj
+          name: objective
+          prose: Policies and measures relating to secure coding, source code review and application testing have been implemented.
+        - id: ospar-gitc-l-1_smt
+          name: statement
+          parts:
+          - id: ospar-gitc-l-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: OSP should adopt standards on secure coding, source code review and application security testing and establish
+              a framework to manage its system development lifecycle\* for higher risk systems. The secure coding and source
+              code review standards should cover areas such as secure programming practices, input validation, output encoding,
+              access controls, authentication, cryptographic practices, and error and exception handling.
+            parts:
+            - id: ospar-gitc-l-1_smt.i.note1
+              name: note
+              ns: urn:x-ospar-oscal:ns
+              prose: \*Within the SDLC framework, it includes models or methodologies such as Waterfall or Agile.
+          - id: ospar-gitc-l-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: A policy and procedure on the use of third party and open-source software codes are established to ensure
+              these codes are subject to review and testing before they are integrated into the Fl’s software.
+          - id: ospar-gitc-l-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: A comprehensive strategy exists to perform application security validation and testing. OSP may use a mix
+              of static, dynamic and interactive application security testing methods to validate the security of the software
+              application. All standards including the software validation and testing rules should be reviewed periodically
+              and kept current.
+          - id: ospar-gitc-l-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: 'The following controls exists when it comes to software application development and management:'
+            parts:
+            - id: ospar-gitc-l-1_smt.iv.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: To facilitate the remediation of vulnerabilities in a timely manner, OSP shall keep track of updates
+                and reported vulnerabilities for third party and open—source software codes that are incorporated in the OSP
+                or Fl’s software.
+            - id: ospar-gitc-l-1_smt.iv.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: OSP should ensure its software developers are trained or have the necessary knowledge and skills to apply
+                the secure coding and application security standards when developing higher risk applications.
+            - id: ospar-gitc-l-1_smt.iv.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: All issues and software defects discovered from the source code review and application security testing
+                should be tracked. Major issues and software defects should be remediated before production deployment.
+          - id: ospar-gitc-l-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: \[If OSP uses DevSecOps\] When adopting DevSecOps practices, OSP shall ensure its DevSecOps activities
+              and processes are aligned with its SDLC framework and IT service management processes (e.g. configuration management,
+              change management, software release management). OSP shall ensure adequate security measures and enforce segregation
+              of duties for the software development, testing and release functions in its DevSecOps processes.
+          - id: ospar-gitc-l-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: 'If OSP uses APIs, the following controls exists:'
+            parts:
+            - id: ospar-gitc-l-1_smt.vi.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: A well-defined vetting process should be implemented for assessing external parties' suitability in connecting
+                to the OSPs via APIs, as well as governing external party API access. The vetting criteria should take into
+                account factors such as the external party’s nature of business, cyber security posture, industry reputation
+                and track record.
+            - id: ospar-gitc-l-1_smt.vi.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: A risk assessment before allowing external parties to connect to its IT systems via APIs should exist,
+                and the OSP should ensure the implementation for each API is commensurate with the sensitivity and business
+                criticality of the data being exchanged, and the confidentiality and integrity requirements of the data.
+            - id: ospar-gitc-l-1_smt.vi.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Security standards for designing and developing secure APIs are established. The standards should include
+                the measures to protect the API keys or access tokens which are used to authorise access to APIs to exchange
+                confidential data. A reasonable timeframe should be defined and enforced for access token expiry to reduce
+                the risk of unauthorised access.
+            - id: ospar-gitc-l-1_smt.vi.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Strong encryption standards and key management controls should be adopted to secure transmission of sensitive
+                data through APIs.
+            - id: ospar-gitc-l-1_smt.vi.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Robust security screening and testing of the API should be performed between the OSP and its external
+                parties before it is deployed into production. OSPs should log the access sessions by external parties, such
+                as the identity of the party making the API connections, date and time, as well as the data being accessed.
+            - id: ospar-gitc-l-1_smt.vi.f
+              name: item
+              props:
+              - name: label
+                value: f.
+              prose: Detective measures, such as technologies that provide real-time monitoring and alerting, should be instituted
+                to provide visibility of the usage and performance of APIs, and detect suspicious activities. Robust measures
+                are established to promptly revoke the API keys or access token in the event of a breach.
+            - id: ospar-gitc-l-1_smt.vi.g
+              name: item
+              props:
+              - name: label
+                value: g.
+              prose: OSP should ensure adequate system capacity is in place to handle high volumes of API call requests and
+                implement measures to mitigate cyber threats such as denial of service (“DoS”) attacks.
+          - id: ospar-gitc-l-1_smt.vii
+            name: item
+            props:
+            - name: label
+              value: vii.
+            prose: 'If OSP uses End User Computing and Applications on systems or services directly related to the FI, the
+              following controls exists:'
+            parts:
+            - id: ospar-gitc-l-1_smt.vii.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: IT hardware, software and services that are not managed by the IT department (i.e. shadow IT) increase
+                the OSP's exposure to risks such as leakage of sensitive data or malware infection. Shadow IT should be managed
+                as part of the OSP’s information assets. There are measures to control and monitor the use of shadow IT in
+                its environment.
+            - id: ospar-gitc-l-1_smt.vii.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: A process is established to assess the risk of end user developed or acquired applications provisioned
+                to the FI and to ensure appropriate controls and security measures are implemented to address the identified
+                risks, and required approvals are obtained before being used. OSP shall ensure proper testing before the applications
+                are deployed.
+          - id: ospar-gitc-l-1_smt.viii
+            name: item
+            props:
+            - name: label
+              value: viii.
+            - name: cloud-specific
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-scope
+              value: CSPs and OSPs offering PaaS/IaaS solutions
+              ns: urn:x-ospar-oscal:ns
+            - name: cloud-service-models
+              value: IaaS PaaS
+              ns: urn:x-ospar-oscal:ns
+            - name: applies-to-csp
+              value: 'true'
+              ns: urn:x-ospar-oscal:ns
+            prose: '(Cloud specific control - CSPs and OSPs offering PaaS/IaaS solutions) If applications are developed for
+              the public cloud environment, OSPs should:'
+            parts:
+            - id: ospar-gitc-l-1_smt.viii.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Adopt appropriate Secure Software Development Life Cycle (“SSDLC”) processes, conduct robust threat modelling,
+                and implement prevailing best practices in software security (e.g. using Open Web Application Security Project
+                “OWASP” guides and frameworks.
+            - id: ospar-gitc-l-1_smt.viii.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: If OSPs use a continuous development-operations process (“DevOps”), security should be embedded throughout
+                the Continuous Integration/Continuous Development (“CI/CD”) toolchain.
+            - id: ospar-gitc-l-1_smt.viii.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: OSPs should adopt a development-security-operations (“DevSecOps”) process, which is the practice of automating
+                and integrating IT operations, quality assurance and security practices in their software development process.
+            - id: ospar-gitc-l-1_smt.viii.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: OSPs need to ensure that only secure container images are used; a container registry could be established
+                to facilitate tracking of container images in line with the OSP’s security requirements.
+  - id: ospar-slc
+    class: part
+    title: Service Level Controls
+    props:
+    - name: label
+      value: III
+    groups:
+    - id: ospar-slc-a
+      class: section
+      title: Setting up of New Clients/ Processes
+      props:
+      - name: label
+        value: III(a)
+      parts:
+      - id: ospar-slc-a_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that client contracting procedures are defined and monitored, and
+          client processes are set up and administered in accordance with client agreements/instructions.
+      controls:
+      - id: ospar-slc-a-1
+        class: service-level-control
+        title: OSP contracting procedures are defined and monitored
+        props:
+        - name: label
+          value: III(a)1
+        - name: sort-id
+          value: 3-a-01
+        parts:
+        - id: ospar-slc-a-1_obj
+          name: objective
+          prose: OSP contracting procedures are defined and monitored
+        - id: ospar-slc-a-1_smt
+          name: statement
+          parts:
+          - id: ospar-slc-a-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: 'In considering, amending, renegotiating or renewing an outsourcing arrangement, the OSP provides accurate
+              and timely information to FIs so that they can perform an appropriate due diligence to assess the risks associated
+              with the outsourcing arrangements. Information provided includes:'
+            parts:
+            - id: ospar-slc-a-1_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: Experience and capability to implement and support the outsourcing arrangements over the contracted period.
+            - id: ospar-slc-a-1_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: Financial strength and resources.
+            - id: ospar-slc-a-1_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Corporate governance, business reputation (including track record/reputation for safeguarding the confidentiality
+                and integrity of customer information in its custody), culture, compliance, and pending or potential litigation.
+            - id: ospar-slc-a-1_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Security and internal controls, audit coverage, reporting and monitoring environment.
+            - id: ospar-slc-a-1_smt.i.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Risk management frameworks and capabilities, including in technology risk management and business continuity
+                management in respect of the outsourcing arrangements.
+            - id: ospar-slc-a-1_smt.i.f
+              name: item
+              props:
+              - name: label
+                value: f.
+              prose: Disaster recovery arrangements and disaster recovery track records.
+            - id: ospar-slc-a-1_smt.i.g
+              name: item
+              props:
+              - name: label
+                value: g.
+              prose: Reliance on and success in dealing with sub-contractors.
+            - id: ospar-slc-a-1_smt.i.h
+              name: item
+              props:
+              - name: label
+                value: h.
+              prose: Insurance coverage.
+            - id: ospar-slc-a-1_smt.i.i
+              name: item
+              props:
+              - name: label
+                value: i.
+              prose: External factors (such as the political, economic, social and legal environment of the jurisdiction in
+                which the OSP operates, and other events) that may impact service performance.
+            - id: ospar-slc-a-1_smt.i.j
+              name: item
+              props:
+              - name: label
+                value: j.
+              prose: Ability to comply with applicable laws and regulations and track records in relation to its compliance
+                with applicable laws and regulations.
+          - id: ospar-slc-a-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Contractual terms and conditions governing relationships, functions, obligations (including minimal insurance
+              coverage of assets), responsibilities, rights and expectations of all contracting parties are set out fully
+              in written agreements (e.g. Outsourcing Agreement with Service Level Agreements (“SLA”)).
+          - id: ospar-slc-a-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: 'The outsourcing agreements between the OSP and FIs have provisions to address the following:'
+            parts:
+            - id: ospar-slc-a-1_smt.iii.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: The scope of the outsourcing arrangement.
+            - id: ospar-slc-a-1_smt.iii.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: The performance, operational, internal control and risk management standards.
+            - id: ospar-slc-a-1_smt.iii.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: Confidentiality and security (i.e. roles and responsibilities, liability for losses in the event of breach
+                of security/confidentiality and access to and disclosure of), including a written undertaking to protect,
+                isolate and maintain the confidentiality of FIs information and other sensitive data. In relation to the FI's
+                customer information, OSPs should only disclose, access, collect, copy, modify, use, store or process FI's
+                customer information only to the extent that is necessary to provide the relevant service.
+            - id: ospar-slc-a-1_smt.iii.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Business resumption and contingency requirements. The OSP is required to develop and establish a disaster
+                recovery contingency framework which defines its roles and responsibilities for documenting, maintaining and
+                testing its contingency plans and recovery procedures.
+            - id: ospar-slc-a-1_smt.iii.e
+              name: item
+              props:
+              - name: label
+                value: e.
+              prose: Processes and procedures to monitor performance, operational, internal control and risk management standards.
+            - id: ospar-slc-a-1_smt.iii.f
+              name: item
+              props:
+              - name: label
+                value: f.
+              prose: Notification of adverse developments (including any significant deviations in the contractual terms or
+                where a service provider or subcontractor has been compelled by law to disclose any customer information)
+                or breaches of legal and regulatory requirements. The outsourcing agreement should specify the type of events
+                and the circumstances under which the OSPs should report such events to the FIs.
+            - id: ospar-slc-a-1_smt.iii.g
+              name: item
+              props:
+              - name: label
+                value: g.
+              prose: Dispute resolution (i.e. protocol for resolving disputes and continuation of contracted services during
+                disputes as well as the jurisdiction and rules under which disputes are to be settled). The outsourcing agreement
+                should specify the resolution process, events of default, and the indemnities, remedies and recourse of the
+                respective parties.
+            - id: ospar-slc-a-1_smt.iii.h
+              name: item
+              props:
+              - name: label
+                value: h.
+              prose: Default termination and early exit by all parties.
+              parts:
+              - id: ospar-slc-a-1_smt.iii.h.note1
+                name: note
+                ns: urn:x-ospar-oscal:ns
+                prose: 'Note: FIs have the right to terminate the outsourcing arrangement in the event of default, ownership
+                  change, insolvency, breach of security or confidentiality, serious deterioration of service quality, or
+                  direction from regulators.'
+            - id: ospar-slc-a-1_smt.iii.i
+              name: item
+              props:
+              - name: label
+                value: i.
+              prose: Sub-contracting (i.e. restrictions on sub-contracting, performance of sub-contractors, clauses governing
+                confidentiality of data, customer consent in the event of disclosure of FI's customer information, certain
+                specified terms between OSP and sub-contractor if required to be included).
+            - id: ospar-slc-a-1_smt.iii.j
+              name: item
+              props:
+              - name: label
+                value: j.
+              prose: FIs’ contractual rights to remove or destroy data stored at the OSP’s systems and backups in the event
+                of contract termination.
+            - id: ospar-slc-a-1_smt.iii.k
+              name: item
+              props:
+              - name: label
+                value: k.
+              prose: Ownership and access (i.e. ownership of assets generated, purchased or acquired during the outsourcing
+                arrangement and access to those assets) to FI's information and other information in relation to the outsourcing
+                arrangement.
+            - id: ospar-slc-a-1_smt.iii.l
+              name: item
+              props:
+              - name: label
+                value: l.
+              prose: Provisions that allow the FIs to conduct audits on the OSP and its sub-contractors, whether by its internal
+                or external auditors, or by agents appointed by the FIs; and to obtain copies of any report and findings made
+                on the OSP and its sub-contractors, in relation to the outsourcing arrangement and to allow such copies of
+                any report or finding to be submitted to the Monetary Authority of Singapore (“MAS”).
+            - id: ospar-slc-a-1_smt.iii.m
+              name: item
+              props:
+              - name: label
+                value: m.
+              prose: Provisions that allow the MAS, or any agent appointed by the MAS, where necessary or expedient, to exercise
+                the contractual rights of the FIs to access and inspect the OSP and its sub-contractors, to obtain records
+                and documents of transactions, and information given to the OSP, stored at or processed by the OSP and its
+                sub-contractors, and the right to access and obtain any report and finding made on the OSP and its sub-contractors.
+            - id: ospar-slc-a-1_smt.iii.n
+              name: item
+              props:
+              - name: label
+                value: n.
+              prose: Provisions for the OSP to comply with FIs’ security policies, procedures and controls to protect the
+                confidentiality and security of the FIs’ sensitive or confidential information, such as customer data, computer
+                files, records, object programmes and source codes.
+            - id: ospar-slc-a-1_smt.iii.o
+              name: item
+              props:
+              - name: label
+                value: o.
+              prose: Provisions for the OSP to implement security policies, procedures and controls that are at least as stringent
+                as the FIs’.
+            - id: ospar-slc-a-1_smt.iii.p
+              name: item
+              props:
+              - name: label
+                value: p.
+              prose: Provisions to ensure that an audit is completed for any new application/system before implementation
+                that will address the FIs’ information asset protection interests. The audit should at least cover areas like
+                system development and implementation life cycle, the relevant documentation supporting each cycle phase,
+                business user (including client where applicable) involvement and sign-off obtained on testing and penetration
+                testing outcomes for application/ system and compliance with pre-agreed security policies with FIs.
+            - id: ospar-slc-a-1_smt.iii.q
+              name: item
+              props:
+              - name: label
+                value: q.
+              prose: Applicable laws (e.g. choice-of-law provisions, agreement covenants and jurisdictional covenants) that
+                provide for adjudication of disputes under the laws of a specific jurisdiction.
+          - id: ospar-slc-a-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: In sub-contracting arrangements where the sub-contractors are providing services to support the OSP’s outsourcing
+              arrangement with the FI, the contractual terms in the sub-contracting arrangements should align with the OSP’s
+              contract with FIs.
+      - id: ospar-slc-a-2
+        class: service-level-control
+        title: OSP’s processes are set up and administered in accordance with FI’s agreements/ instructions
+        props:
+        - name: label
+          value: III(a)2
+        - name: sort-id
+          value: 3-a-02
+        parts:
+        - id: ospar-slc-a-2_obj
+          name: objective
+          prose: OSP’s processes are set up and administered in accordance with FI’s agreements/ instructions.
+        - id: ospar-slc-a-2_smt
+          name: statement
+          parts:
+          - id: ospar-slc-a-2_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Implemented process control activities are agreed with the FIs. The types of these controls are appropriate
+              for the nature and materiality of the outsourcing arrangements.
+          - id: ospar-slc-a-2_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Operating procedures are documented, reviewed and updated at least every 12 months and made available to
+              appropriate personnel.
+    - id: ospar-slc-b
+      class: section
+      title: Authorising and Processing Transactions
+      props:
+      - name: label
+        value: III(b)
+      parts:
+      - id: ospar-slc-b_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that services of the OSP are authorised, recorded and subjected
+          to internal checks to ensure completeness, accuracy and validity on a timely basis. Services are processed in stages
+          by independent parties such that there is segregation of duties from inception to completion.
+      controls:
+      - id: ospar-slc-b-1
+        class: service-level-control
+        title: Services and related processes are authorised and recorded completely, accurately and on a timely basis
+        props:
+        - name: label
+          value: III(b)1
+        - name: sort-id
+          value: 3-b-01
+        parts:
+        - id: ospar-slc-b-1_obj
+          name: objective
+          prose: Services and related processes are authorised and recorded completely, accurately and on a timely basis.
+        - id: ospar-slc-b-1_smt
+          name: statement
+          parts:
+          - id: ospar-slc-b-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Services provided to the FIs and related automated and manual processes, including controls, are set up
+              and administered in accordance with mutually agreed instructions between OSP and FI. Such agreement might include
+              standard operating procedures (“SOP”) or other types of instructions.
+          - id: ospar-slc-b-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Service procedures are documented, kept current and made available to appropriate personnel.
+      - id: ospar-slc-b-2
+        class: service-level-control
+        title: Services are subjected to internal checks to reduce the likelihood of errors
+        props:
+        - name: label
+          value: III(b)2
+        - name: sort-id
+          value: 3-b-02
+        parts:
+        - id: ospar-slc-b-2_obj
+          name: objective
+          prose: Services are subjected to internal checks to reduce the likelihood of errors.
+        - id: ospar-slc-b-2_smt
+          name: statement
+          parts:
+          - id: ospar-slc-b-2_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: All services are recorded and checked against the FIs’ specifications as defined in documented procedures.
+              Errors or omissions are rectified promptly. All breaches and incidents (i.e. IT and non-IT) are tracked and
+              escalated as per the SLA. Root cause analysis is conducted and, where appropriate, remedial actions are implemented
+              to prevent recurrence.
+          - id: ospar-slc-b-2_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Error prevention and detection controls (e.g. reconciliations and “maker-checker” reviews, and error correction
+              mechanisms) are in place for key processes.
+          - id: ospar-slc-b-2_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Management Information reports are generated as per the agreed procedure to report on the status of tasks
+              performed. Key performance indicators (“KPIs”) are monitored as per the agreed procedures.
+      - id: ospar-slc-b-3
+        class: service-level-control
+        title: Services are processed in stages by independent parties such that there is segregation of duties from inception
+          to completion
+        props:
+        - name: label
+          value: III(b)3
+        - name: sort-id
+          value: 3-b-03
+        parts:
+        - id: ospar-slc-b-3_obj
+          name: objective
+          prose: Services are processed in stages by independent parties such that there is segregation of duties from inception
+            to completion.
+        - id: ospar-slc-b-3_smt
+          name: statement
+          parts:
+          - id: ospar-slc-b-3_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Appropriate segregation of duties is implemented for transaction processing through logical and/or physical
+              access controls.
+          - id: ospar-slc-b-3_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Access to record, authority to post and authorise transactions or services is restricted. Only authorised
+              users have access to update customer service records.
+      - id: ospar-slc-b-4
+        class: service-level-control
+        title: Sample Controls for Data Entry Services
+        props:
+        - name: label
+          value: III(b)4
+        - name: sort-id
+          value: 3-b-04
+        - name: applicability
+          value: conditional
+          ns: urn:x-ospar-oscal:ns
+        - name: service-type
+          value: Data Entry Services
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-slc-b-4_obj
+          name: objective
+          prose: Data entry procedures are performed in an accurate and timely manner.
+        - id: ospar-slc-b-4_app
+          name: applicability
+          ns: urn:x-ospar-oscal:ns
+          prose: 'Note: The following controls apply to data entry service providers only. Add this section if it is relevant
+            to the service provided to the FIs.'
+        - id: ospar-slc-b-4_smt
+          name: statement
+          parts:
+          - id: ospar-slc-b-4_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Input forms are stamped with the date/time of receipt.
+          - id: ospar-slc-b-4_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Input forms are batched and batch totals (e.g. number of forms are calculated and logged).
+          - id: ospar-slc-b-4_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Batch totals are re-calculated upon data entry and reconciled with the log. Discrepancies are investigated
+              and remediated.
+          - id: ospar-slc-b-4_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Processed input forms are clearly marked to prevent re-input.
+          - id: ospar-slc-b-4_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Keyed data are verified against the original input forms to verify accuracy of data entry.
+          - id: ospar-slc-b-4_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: The identities of the maker and checker are recorded for accountability.
+      - id: ospar-slc-b-5
+        class: service-level-control
+        title: Sample Controls for Debt Collection Services
+        props:
+        - name: label
+          value: III(b)5
+        - name: sort-id
+          value: 3-b-05
+        - name: applicability
+          value: conditional
+          ns: urn:x-ospar-oscal:ns
+        - name: service-type
+          value: Debt Collection Services
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-slc-b-5_obj
+          name: objective
+          prose: Collections and monies received are posted to customer accounts in an accurate and timely manner.
+        - id: ospar-slc-b-5_app
+          name: applicability
+          ns: urn:x-ospar-oscal:ns
+          prose: 'Note: The following controls apply to debt collection service providers only. Add this section if it is
+            relevant to the service provided to the FIs.'
+        - id: ospar-slc-b-5_smt
+          name: statement
+          parts:
+          - id: ospar-slc-b-5_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Debt collection procedures are documented to guide personnel in the debt collection process.
+          - id: ospar-slc-b-5_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Debt collection instructions are scanned into a document imaging application for archiving and retrieval.
+          - id: ospar-slc-b-5_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: The outstanding amounts in debt collection instructions are recorded and reconciled to the collected amounts
+              before posting to the FIs’ accounts.
+          - id: ospar-slc-b-5_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: The debt collection report is reviewed by the checker before the posting is approved.
+          - id: ospar-slc-b-5_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: The identities of the maker and checker are recorded for accountability.
+      - id: ospar-slc-b-6
+        class: service-level-control
+        title: Sample Controls for Physical and Electronic Statement Printing Services
+        props:
+        - name: label
+          value: III(b)6
+        - name: sort-id
+          value: 3-b-06
+        - name: applicability
+          value: conditional
+          ns: urn:x-ospar-oscal:ns
+        - name: service-type
+          value: Physical and Electronic Statement Printing Services
+          ns: urn:x-ospar-oscal:ns
+        parts:
+        - id: ospar-slc-b-6_obj
+          name: objective
+          prose: Customer Statements are printed accurately and sent timely to FIs’ customers.
+        - id: ospar-slc-b-6_app
+          name: applicability
+          ns: urn:x-ospar-oscal:ns
+          prose: 'Note: The following controls apply to Physical and Electronic Statement Printing service providers only.
+            Add this section if it is relevant to the service provided to the FIs.'
+        - id: ospar-slc-b-6_smt
+          name: statement
+          parts:
+          - id: ospar-slc-b-6_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Statement printing procedures are documented to guide personnel in the statement printing process.
+          - id: ospar-slc-b-6_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: A statement schedule outlines when statements are required to be printed and mailed for each customer.
+          - id: ospar-slc-b-6_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: System reports with batch and hash totals are reconciled to ensure the completeness and accuracy of printed
+              statements.
+          - id: ospar-slc-b-6_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: The identities of the checker and verifier of system reconciliation reports are recorded for accountability.
+    - id: ospar-slc-c
+      class: section
+      title: Maintaining Records
+      props:
+      - name: label
+        value: III(c)
+      parts:
+      - id: ospar-slc-c_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that the OSP classifies data according to sensitivity, which determines
+          protection requirements, access rights and restrictions, and retention and destruction requirements.
+      controls:
+      - id: ospar-slc-c-1
+        class: service-level-control
+        title: Data are classified according to sensitivity, which determines protection requirements, access rights and restrictions,
+          and the retention and destruction requirements
+        props:
+        - name: label
+          value: III(c)1
+        - name: sort-id
+          value: 3-c-01
+        parts:
+        - id: ospar-slc-c-1_obj
+          name: objective
+          prose: Data are classified according to sensitivity, which determines protection requirements, access rights and
+            restrictions, and the retention and destruction requirements.
+        - id: ospar-slc-c-1_smt
+          name: statement
+          parts:
+          - id: ospar-slc-c-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Policies for data classification, retention and destruction are implemented. Retention is as required by
+              local law (governing the FIs) or as required by the FIs.
+          - id: ospar-slc-c-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Data held with the OSP (both in physical and electronic forms) are stored in appropriate media where the
+              level of backups is determined based on the classification of data. For information/records held in electronic
+              storage media (including cloud based storage services), the OSP should ensure that appropriate levels of data/record
+              segregation exist to prevent co-mingling of data. Logical segregation is an acceptable form of control to segregate
+              customer information held electronically.
+          - id: ospar-slc-c-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Procedures on retention of information and data should be implemented. These procedures should clearly
+              state retention guidelines based on the classification of information/data, applicable laws and agreed with
+              the FIs.
+          - id: ospar-slc-c-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Procedures on destruction of information and data by the OSP should be implemented. These procedures should
+              clearly state the secured destruction process based on the classification of information held. The procedures
+              should be agreed with the FIs.
+          - id: ospar-slc-c-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: For terminated arrangements, the OSP should provide the FIs with the relevant evidence that demonstrates
+              that all forms of data/records/information (both electronic and physical) given to the OSP and sub-contractor
+              (where applicable) have been promptly removed or deleted, destroyed or rendered unusable, unless the OSP or
+              sub-contractor is prohibited from doing so by law.
+          - id: ospar-slc-c-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: Ownership of data, and the roles and responsibilities of the staff managing the data is defined.
+    - id: ospar-slc-d
+      class: section
+      title: Safeguarding Assets
+      props:
+      - name: label
+        value: III(d)
+      parts:
+      - id: ospar-slc-d_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that physical assets held by the OSP are safeguarded from loss,
+          misappropriation and unauthorised access.
+      controls:
+      - id: ospar-slc-d-1
+        class: service-level-control
+        title: Physical assets owned by the OSP to deliver the service and/or assets owned by FIs under OSP’s monitoring and
+          controls are safeguarded from loss, misappropriation and unauthorised access
+        props:
+        - name: label
+          value: III(d)1
+        - name: sort-id
+          value: 3-d-01
+        parts:
+        - id: ospar-slc-d-1_obj
+          name: objective
+          prose: Physical assets owned by the OSP to deliver the service and/or assets owned by FIs under OSP’s monitoring
+            and controls are safeguarded from loss, misappropriation and unauthorised access.
+        - id: ospar-slc-d-1_smt
+          name: statement
+          parts:
+          - id: ospar-slc-d-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: Physical assets owned by OSP to deliver the service and/or assets owned by FIs under OSP's monitoring and
+              control are safeguarded from loss, misappropriation and unauthorised access. Physical access to the operational
+              OSP’s office/facilities is restricted to authorised personnel at all times. The entry to office/ facilities
+              is through an automated proximity access card entry control system.
+          - id: ospar-slc-d-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Access to offices/ facilities after normal business hours is pre-approved. Access is monitored 24 hours
+              a day, 365 days a year.
+          - id: ospar-slc-d-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Physical assets (e.g. office equipment, storage media) are tagged and are assigned to custodians. Fixed
+              assets counts are performed every 12 months and movements of assets are tracked and recorded.
+    - id: ospar-slc-e
+      class: section
+      title: Service Reporting and Monitoring
+      props:
+      - name: label
+        value: III(e)
+      parts:
+      - id: ospar-slc-e_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that OSP’s engagement with FIs and sub-contractors handling material
+          outsourcing and FIs’ customer information are properly managed.
+      controls:
+      - id: ospar-slc-e-1
+        class: service-level-control
+        title: Outsourced activities are properly managed and monitored
+        props:
+        - name: label
+          value: III(e)1
+        - name: sort-id
+          value: 3-e-01
+        parts:
+        - id: ospar-slc-e-1_obj
+          name: objective
+          prose: Outsourced activities are properly managed and monitored.
+        - id: ospar-slc-e-1_smt
+          name: statement
+          parts:
+          - id: ospar-slc-e-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: A governance framework supported by policies, procedures, guidelines and standards is established to manage
+              and deliver its services.
+          - id: ospar-slc-e-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Due diligence and risk assessments of sub-contractors providing sub-contracted services are performed at
+              least annually or at a frequency agreed with the FIs. The due diligence includes the review of independent audit/expert
+              assessment reports.
+          - id: ospar-slc-e-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: The governance procedures include regular training for employees and sub-contractors/ third parties to
+              ensure that employees and sub-contractors/ third parties are aware of relevant regulatory requirements (e.g.
+              anti-bribery and banking secrecy).
+          - id: ospar-slc-e-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: SLAs with FIs and sub-contractors clearly define performance monitoring (e.g. performance measures and
+              indicators such as system uptime and turnaround time for document processing) and reporting requirements. Achievements
+              of agreed key performance indicators (“KPIs”) and key risk indicators (“KRIs”) are tracked and monitored.
+          - id: ospar-slc-e-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: Procedures are established for service recovery and reporting of lapses relating to the agreed service
+              standards, including processes ensuring regular exchange of information and communication of critical issues.
+          - id: ospar-slc-e-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: The OSP arranges regular meetings with FI clients and sub-contractors/ third parties to discuss performance
+              and service delivery outcomes. Corrective actions and plans are prepared and agreed with FI clients and sub-
+              contractors to address performance and service delivery gaps.
+    - id: ospar-slc-f
+      class: section
+      title: Business Continuity Management
+      props:
+      - name: label
+        value: III(f)
+      parts:
+      - id: ospar-slc-f_obj
+        name: objective
+        ns: urn:x-ospar-oscal:ns
+        prose: These controls provide reasonable assurance that business continuity plans are documented, approved, tested
+          and maintained.
+      controls:
+      - id: ospar-slc-f-1
+        class: service-level-control
+        title: Business Continuity Plan (BCP) is documented, approved, tested and maintained
+        props:
+        - name: label
+          value: III(f)1
+        - name: sort-id
+          value: 3-f-01
+        parts:
+        - id: ospar-slc-f-1_obj
+          name: objective
+          prose: Business Continuity Plan (BCP) is documented, approved, tested and maintained.
+        - id: ospar-slc-f-1_smt
+          name: statement
+          prose: Business Continuity Management ("BCM") refers to a set of practices that includes putting in place policies,
+            standards, processes, and measures to provide for continuous functioning of the organisation during operational
+            disruptions.
+          parts:
+          - id: ospar-slc-f-1_smt.i
+            name: item
+            props:
+            - name: label
+              value: i.
+            prose: A business continuity plan is established and maintained based on business, operational and information
+              technology needs of FI.
+            parts:
+            - id: ospar-slc-f-1_smt.i.a
+              name: item
+              props:
+              - name: label
+                value: a.
+              prose: 'The OSP could consider including the below areas within their BCP:'
+              parts:
+              - id: ospar-slc-f-1_smt.i.a.b1
+                name: item
+                prose: critical business functions segregation – separate critical business functions into different zones
+                  to mitigate the risk of losing multiple critical business functions, and the critical business services
+                  that they support, from a wide area disruption;
+              - id: ospar-slc-f-1_smt.i.a.b2
+                name: item
+                prose: split team and back-up team arrangements – deploying critical personnel across different zones, or
+                  establish reserve team arrangements to eliminate the dependency on a single labour pool;
+              - id: ospar-slc-f-1_smt.i.a.b3
+                name: item
+                prose: cross-training – identify critical skills or roles, and develop cross-training programs to build versatility
+                  for key personnel involved in these roles;
+              - id: ospar-slc-f-1_smt.i.a.b4
+                name: item
+                prose: cross-border support – activate cross-border support as a contingency during disruptions; or
+              - id: ospar-slc-f-1_smt.i.a.b5
+                name: item
+                prose: contingency plan to support subcontracted critical business functions, in the event that the subcontractor
+                  is unavailable.
+            - id: ospar-slc-f-1_smt.i.b
+              name: item
+              props:
+              - name: label
+                value: b.
+              prose: OSP should have clearly defined criteria for BCP activation when a critical business service encounters
+                partial disruption (including intermittent or reduced performance that is not tantamount to a complete unavailability
+                of service). This will guide the OSP in activating its BCP in a timely and decisive manner before the service
+                degradation worsens to the point that it results in severe impact.
+            - id: ospar-slc-f-1_smt.i.c
+              name: item
+              props:
+              - name: label
+                value: c.
+              prose: OSP should notify the FIs of any substantial changes in the OSPs’ BCP plans and of any adverse development
+                that could substantially impact the services provided to the FIs.
+            - id: ospar-slc-f-1_smt.i.d
+              name: item
+              props:
+              - name: label
+                value: d.
+              prose: Roles and responsibilities of relevant personnel in the business continuity process should be included
+                in the plan.
+          - id: ospar-slc-f-1_smt.ii
+            name: item
+            props:
+            - name: label
+              value: ii.
+            prose: Business continuity policy, plan and procedures, including the relevant training programmes for staff,
+              activation and escalation process, are regularly reviewed and updated based on the changes in the OSP’s operational
+              environment and the threat landscape. FIs should also be permitted to participate in BCP tests as appropriate.
+          - id: ospar-slc-f-1_smt.iii
+            name: item
+            props:
+            - name: label
+              value: iii.
+            prose: Critical business services and functions of the OSP that support the service should have their respective
+              RTOs defined. Such services / functions and their defined RTOs are reviewed at least annually, or whenever there
+              are material changes that affect them.
+          - id: ospar-slc-f-1_smt.iv
+            name: item
+            props:
+            - name: label
+              value: iv.
+            prose: Comprehensive testing of BCM should be conducted on a regular basis, to ensure that the OSP's business
+              continuity processes are robust and enable them to continue the delivery of critical business services in a
+              timely and reliable manner following a disruption. The test objectives, scope and defined frequency of these
+              tests should be commensurate with the criticality of the business services and functions.
+          - id: ospar-slc-f-1_smt.v
+            name: item
+            props:
+            - name: label
+              value: v.
+            prose: 'All BCP test records, clearly indicating details, such as the test objectives, scope, scenario design,
+              participants involved, results and follow-ups for each test should be clearly documented.
+
+
+              Gaps and weaknesses identified from the OSP''s business continuity testing should be addressed and reported
+              to the senior management.'
+          - id: ospar-slc-f-1_smt.vi
+            name: item
+            props:
+            - name: label
+              value: vi.
+            prose: Formal process to track, assign ownership and follow up on the remedial actions identified in each test
+              is established. The effectiveness of the remediation measures undertaken should also be validated at subsequent
+              tests to ensure proper implementation.
+  back-matter:
+    resources:
+    - uuid: 488521b7-60d8-506e-94e3-c7b6b39404ed
+      title: ABS Guidelines on Control Objectives and Procedures for Outsourced Service Providers, Version 2.0 (PDF)
+      rlinks:
+      - href: https://abs.org.sg/docs/library/abs-ospar-guidelines-v2-0.pdf
+        media-type: application/pdf
+        hashes:
+        - value: 635b02875de69e3cc1de1579b70facd5f4c19edf127bd2e3769e8a92f70b360b
+          algorithm: SHA-256

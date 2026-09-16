@@ -17,10 +17,16 @@ A machine-readable version of the Association of Banks in Singapore (ABS) *Guide
 | `ospar-v2.0-catalog.xml` | Same catalog, OSCAL XML |
 | `ospar-v2.0-catalog.yaml` | Same catalog, OSCAL YAML |
 | `ospar-v2.0-catalog-activities.csv` | Flat view, one row per statement/item/note. For review, spreadsheets and crosswalks. **Not an OSCAL file.** |
+| `qa-report.md` | Extraction quality report for this release (validation results, counts, text reconciliation) |
+| `ospar-v2.0-profile-full.{json,xml,yaml}` | OSCAL profile importing every control, with no selection or modification |
+| `ospar-v2.0-profile-full-resolved.{json,xml,yaml}` | That profile resolved into a catalog, ready for SSP and assessment tooling that expects a resolved catalog |
+| `profile-qa-report.md` | Validation and equivalence checks for the profile and resolved catalog |
 
 All three OSCAL files carry the same content. Pick whichever format your tooling expects.
 
 **OSCAL version:** the files declare `1.1.3`. They also validate against the NIST 1.2.1 JSON and XML schemas.
+
+**Validation:** all OSCAL files pass `oscal-cli validate` (oscal-cli 3.2.0), which checks OSCAL's schema and constraint rules, not just the JSON/XML schemas.
 
 ---
 
@@ -42,7 +48,7 @@ Front matter from the PDF is kept in the metadata. The Introduction and Scope ar
 
 The source has three different structures, and the catalog maps each one differently:
 
-- **General IT Controls (II) and Service Level Controls (III).** Each section (e.g. II(a) Logical Security) is a **group**. The section's "These controls provide reasonable assurance…" statement is a part named `objective` on that group. Each **numbered control objective** (1., 2., …) is a **control**. Its control activities (i., ii., …) and sub-items (a., b., bullets) sit inside the control's `statement` part. This matches how OSPAR audit reports qualify results against control objectives.
+- **General IT Controls (II) and Service Level Controls (III).** Each section (e.g. II(a) Logical Security) is a **group**. The section's "These controls provide reasonable assurance…" statement is a part named `objective` (in the `urn:x-ospar-oscal:ns` namespace) on that group. Each **numbered control objective** (1., 2., …) is a **control**. Its control activities (i., ii., …) and sub-items (a., b., bullets) sit inside the control's `statement` part. This matches how OSPAR audit reports qualify results against control objectives.
 - **Entity Level Controls (I).** Each component (a)–(g) is a control. The source here is mostly prose, so the statement holds paragraphs and roman-numbered lists in source order.
 - **Audits and Inspections.** Each heading I–VI is a control (class `audit-requirement`). These are requirements on the audit regime (auditor criteria, audit frequency, reporting), not controls the OSP operates. Filter on `class` if you only want operational controls.
 
@@ -110,7 +116,7 @@ OSPAR-specific props use namespace **`urn:x-ospar-oscal:ns`**:
 | `alt-term` | definition part | text | Alternative term (e.g. "outsourced service provider") |
 | `transformation` | metadata | `unofficial` | Marks this catalog as a non-ABS artefact |
 
-Non-standard part names (`note`, `paragraph`, `applicability`, `definition`) use the same namespace.
+Non-standard part names (`note`, `paragraph`, `applicability`, `definition`, and `objective` on section groups) use the same namespace.
 
 ---
 
@@ -136,6 +142,16 @@ jq -r '.. | objects | select(has("controls")) | .controls[] | select(any(.props[
 # A definition
 jq -r '.catalog.groups[] | select(.id=="ospar-defs") | .parts[] | select(.title=="service provider") | .prose' $F
 ```
+
+### Full profile and resolved catalog
+
+`ospar-v2.0-profile-full.*` imports every control unchanged (`include-all`, `merge/as-is`). OSPAR has no official baselines, so no tailored profiles are published. The profile is a stable import target for your own.
+
+`ospar-v2.0-profile-full-resolved.*` is that profile resolved with oscal-cli:
+
+- **Same content as the catalog:** every control, part and property matches the catalog exactly (checked in `profile-qa-report.md`).
+- **No definitions:** OSCAL resolution drops groups that contain no controls, so the Definitions group is not included. Use the catalog for definitions.
+- **Metadata re-added:** the resolver strips most metadata. The unofficial marker, disclaimer, publication date, version history and source-PDF reference were added back afterwards. The prop `metadata-restored=true` records this. Controls were not touched.
 
 ### Tailoring with an OSCAL profile
 
@@ -163,7 +179,7 @@ To define your own baseline (e.g. only the controls relevant to a cloud SaaS ser
 }
 ```
 
-This example validates against the OSCAL 1.1.3 profile schema. It has not been resolved through a profile resolver. Replace the placeholder UUID.
+This example validates against the OSCAL 1.1.3 profile schema. It has not been run through a resolver; the published full profile has. Replace the placeholder UUID.
 
 To leave out the conditional Sample Controls, exclude `ospar-slc-b-4`, `ospar-slc-b-5` and `ospar-slc-b-6` unless your service is one of those types.
 

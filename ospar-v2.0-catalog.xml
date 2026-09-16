@@ -362,7 +362,7 @@
     <group id="ospar-gitc-a" class="section">
       <title>Logical Security</title>
       <prop name="label" value="II(a)"/>
-      <part id="ospar-gitc-a_obj" name="objective">
+      <part id="ospar-gitc-a_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that logical access to programmes, data and operating system software is restricted to authorised personnel on a need-to-have basis.</p>
       </part>
       <control id="ospar-gitc-a-1" class="general-it-control">
@@ -551,7 +551,7 @@
     <group id="ospar-gitc-b" class="section">
       <title>Physical Security</title>
       <prop name="label" value="II(b)"/>
-      <part id="ospar-gitc-b_obj" name="objective">
+      <part id="ospar-gitc-b_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that Data Centre (“DC”)/Controlled Areas are resilient and physically secured from internal and external threats.</p>
       </part>
       <control id="ospar-gitc-b-1" class="general-it-control">
@@ -686,7 +686,7 @@
     <group id="ospar-gitc-c" class="section">
       <title>Change Management</title>
       <prop name="label" value="II(c)"/>
-      <part id="ospar-gitc-c_obj" name="objective">
+      <part id="ospar-gitc-c_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that changes to applications, system software and network components are assessed, approved, tested, implemented and reviewed in a controlled manner.</p>
       </part>
       <control id="ospar-gitc-c-1" class="general-it-control">
@@ -764,7 +764,7 @@
     <group id="ospar-gitc-d" class="section">
       <title>Incident Management</title>
       <prop name="label" value="II(d)"/>
-      <part id="ospar-gitc-d_obj" name="objective">
+      <part id="ospar-gitc-d_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that all system and network processing issues are resolved in a timely and controlled manner.</p>
       </part>
       <control id="ospar-gitc-d-1" class="general-it-control">
@@ -841,7 +841,7 @@
     <group id="ospar-gitc-e" class="section">
       <title>Backup and Disaster Recovery</title>
       <prop name="label" value="II(e)"/>
-      <part id="ospar-gitc-e_obj" name="objective">
+      <part id="ospar-gitc-e_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that information systems recovery plans are documented, approved, tested and maintained. Backups are performed and securely stored.</p>
       </part>
       <control id="ospar-gitc-e-1" class="general-it-control">
@@ -974,7 +974,7 @@
     <group id="ospar-gitc-f" class="section">
       <title>Network and Security Management</title>
       <prop name="label" value="II(f)"/>
-      <part id="ospar-gitc-f_obj" name="objective">
+      <part id="ospar-gitc-f_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that systems and network controls are implemented based on FIs’ business needs.</p>
       </part>
       <control id="ospar-gitc-f-1" class="general-it-control">
@@ -1052,7 +1052,7 @@
     <group id="ospar-gitc-g" class="section">
       <title>Security Incident Response</title>
       <prop name="label" value="II(g)"/>
-      <part id="ospar-gitc-g_obj" name="objective">
+      <part id="ospar-gitc-g_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that appropriate personnel within the OSP are contacted and immediate action is taken in response to a security incident. Requirements in the relevant notices such as the MAS TRM Notice are adhered to.</p>
       </part>
       <control id="ospar-gitc-g-1" class="general-it-control">
@@ -1098,7 +1098,7 @@
     <group id="ospar-gitc-h" class="section">
       <title>System Vulnerability Assessments</title>
       <prop name="label" value="II(h)"/>
-      <part id="ospar-gitc-h_obj" name="objective">
+      <part id="ospar-gitc-h_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that vulnerability assessments and penetration testing are conducted regularly to detect and remediate security vulnerabilities in the IT environment.</p>
       </part>
       <control id="ospar-gitc-h-1" class="general-it-control">
@@ -1159,7 +1159,7 @@
     <group id="ospar-gitc-i" class="section">
       <title>Technology Refresh Management</title>
       <prop name="label" value="II(i)"/>
-      <part id="ospar-gitc-i_obj" name="objective">
+      <part id="ospar-gitc-i_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that software and hardware components used in the production and disaster recovery environment are refreshed timely.</p>
       </part>
       <control id="ospar-gitc-i-1" class="general-it-control">
@@ -1196,7 +1196,7 @@
     <group id="ospar-gitc-j" class="section">
       <title>Data Security</title>
       <prop name="label" value="II(j)"/>
-      <part id="ospar-gitc-j_obj" name="objective">
+      <part id="ospar-gitc-j_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that comprehensive data loss prevention policies and measures have been adopted to detect and prevent unauthorised access, modification, copying or transmission of the FI’s confidential data.</p>
       </part>
       <control id="ospar-gitc-j-1" class="general-it-control">
@@ -1246,7 +1246,7 @@
     <group id="ospar-gitc-k" class="section">
       <title>Cryptography</title>
       <prop name="label" value="II(k)"/>
-      <part id="ospar-gitc-k_obj" name="objective">
+      <part id="ospar-gitc-k_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that industry-accepted cryptographic controls have been implemented to protect data confidentiality, maintain data integrity and authenticity.</p>
       </part>
       <control id="ospar-gitc-k-1" class="general-it-control">
@@ -1327,7 +1327,7 @@
     <group id="ospar-gitc-l" class="section">
       <title>Software Application Development and Management</title>
       <prop name="label" value="II(l)"/>
-      <part id="ospar-gitc-l_obj" name="objective">
+      <part id="ospar-gitc-l_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that policies and measures relating to secure coding, source code review and application security testing have been implemented.</p>
       </part>
       <control id="ospar-gitc-l-1" class="general-it-control">
@@ -1452,7 +1452,7 @@
     <group id="ospar-slc-a" class="section">
       <title>Setting up of New Clients/ Processes</title>
       <prop name="label" value="III(a)"/>
-      <part id="ospar-slc-a_obj" name="objective">
+      <part id="ospar-slc-a_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that client contracting procedures are defined and monitored, and client processes are set up and administered in accordance with client agreements/instructions.</p>
       </part>
       <control id="ospar-slc-a-1" class="service-level-control">
@@ -1614,7 +1614,7 @@
     <group id="ospar-slc-b" class="section">
       <title>Authorising and Processing Transactions</title>
       <prop name="label" value="III(b)"/>
-      <part id="ospar-slc-b_obj" name="objective">
+      <part id="ospar-slc-b_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that services of the OSP are authorised, recorded and subjected to internal checks to ensure completeness, accuracy and validity on a timely basis. Services are processed in stages by independent parties such that there is segregation of duties from inception to completion.</p>
       </part>
       <control id="ospar-slc-b-1" class="service-level-control">
@@ -1784,7 +1784,7 @@
     <group id="ospar-slc-c" class="section">
       <title>Maintaining Records</title>
       <prop name="label" value="III(c)"/>
-      <part id="ospar-slc-c_obj" name="objective">
+      <part id="ospar-slc-c_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that the OSP classifies data according to sensitivity, which determines protection requirements, access rights and restrictions, and retention and destruction requirements.</p>
       </part>
       <control id="ospar-slc-c-1" class="service-level-control">
@@ -1825,7 +1825,7 @@
     <group id="ospar-slc-d" class="section">
       <title>Safeguarding Assets</title>
       <prop name="label" value="III(d)"/>
-      <part id="ospar-slc-d_obj" name="objective">
+      <part id="ospar-slc-d_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that physical assets held by the OSP are safeguarded from loss, misappropriation and unauthorised access.</p>
       </part>
       <control id="ospar-slc-d-1" class="service-level-control">
@@ -1854,7 +1854,7 @@
     <group id="ospar-slc-e" class="section">
       <title>Service Reporting and Monitoring</title>
       <prop name="label" value="III(e)"/>
-      <part id="ospar-slc-e_obj" name="objective">
+      <part id="ospar-slc-e_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that OSP’s engagement with FIs and sub-contractors handling material outsourcing and FIs’ customer information are properly managed.</p>
       </part>
       <control id="ospar-slc-e-1" class="service-level-control">
@@ -1895,7 +1895,7 @@
     <group id="ospar-slc-f" class="section">
       <title>Business Continuity Management</title>
       <prop name="label" value="III(f)"/>
-      <part id="ospar-slc-f_obj" name="objective">
+      <part id="ospar-slc-f_obj" name="objective" ns="urn:x-ospar-oscal:ns">
         <p>These controls provide reasonable assurance that business continuity plans are documented, approved, tested and maintained.</p>
       </part>
       <control id="ospar-slc-f-1" class="service-level-control">
